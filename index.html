@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <title> Solar System Builder </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    </head>
+
+  <body>
+  <div class="container">
+  <header class="row borders">
+      <h1 class="stellar text-center">Solar System Builder</br><small>Generate a realistic Solar System</h1>
+  </header>
+
+ <nav class="navbar">
+    <ul class="nav navbar-nav">
+      <li class="borders"><a href="https://www.physics.byu.edu/faculty/christensen/Physics%20127/Figures/Nature%20of%20the%20Stars/Main%20Sequence%20Spectral%20Types,%20Temperatures%20and%20B-V%20Color%20Indices.htm">Main Sequence Stars</a></li>
+      <li class="borders"><a href="https://en.wikipedia.org/wiki/Mass%E2%80%93luminosity_relation">Mass-Luminosity Relation</a></li>
+      <li class="borders"><a href="http://www.transhuman.talktalk.net/iw/Geosync.htm">Planet Designer</a></li>
+      <li class="borders"><a href="https://en.wikipedia.org/wiki/Apparent_magnitude">Apparent Magnitude</a></li>
+      <li class="borders"><a href="http://www.planetarybiology.com/calculating_habitable_zone.html">Habitable Zone</a></li>
+       <li class="borders"><a href="https://en.wikipedia.org/wiki/Solar_luminosity">Solar Units</a></li>
+      <li class="borders"><a href="https://en.wikipedia.org/wiki/Parsec">Parsecs</a></li>
+      <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Source Code</a></li>
+      <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Donate</a></li>
+    </ul>
+  </nav>
+  <hr>
+
+  <article class="main borders">
+  <h2 class="center">Create a Star</h2>
+
+     <section class="sub row borders margin">
+  <h4 class="center"><strong>Star Inputs: Generate a Star by using Luminosity, Apparent Magnitude, Distance (in Parsecs), and Spectral Class</strong></h4>
+  </br>
+    <div class="thisContainer">  
+    
+  
+        
+        <form id="star">
+        
+        <label for="brightness">1) Enter Luminosity in Solar Units (Sun's Luminosity = 1 Solar Unit): </label>
+        <input class="form-control" id="brightness" type="text" value="1" autofocus/></br>
+      
+        <label for="apparent">2) Enter Apparent Magnitude (mv): </label>
+        <input class="form-control" id="apparent" type="text" value="-26.74" autofocus/></br>
+        
+
+        <label for="distance">3) Enter how far away your new star is from the Earth ( in <abbr title="Parallax of one arcsecond">Parsecs</abbr>): </label>
+        <input class="form-control" id="distance" type="text" value="0.000004848" 
+        autofocus/>
+        
+        </br>
+        <label for="spectral">4) Choose your type of star:</label><select class="form-control" form="star" id="spectral" name="spectalClass">
+            <option value='{"Temp":52000,"BC": -5.1}'> O0 | Hottest Blue Star </option>
+            <option value='{"Temp":50000,"BC": -4.9}'> O1 | Very, Very, Very Hot Blue Star </option>
+            <option value='{"Temp":48000,"BC": -4.8}'> O2 | Very, Very Hot Blue Star </option>
+            <option value='{"Temp":46000,"BC": -4.6}'> O3 | Very Hot Blue Star </option>
+            <option value='{"Temp":44000,"BC": -4.3}'> O4 | Hot Blue Star </option>
+            <option value='{"Temp":42000,"BC": -4.0}'> O5 | Average Temperature Blue Star </option>
+            <option value='{"Temp":40000,"BC": -3.76}'> O6 | Warm Blue Star </option>
+            <option value='{"Temp":38000,"BC": -3.52}'> O7 | Cool Blue Star </option>
+            <option value='{"Temp":36000,"BC": -3.28}'> O8 | Cooler Blue Star </option>
+            <option value='{"Temp":34000,"BC": -3.04}'> O9 | Coolest Blue Star </option>
+
+            <option value='{"Temp":30000,"BC": -2.8}'> B0 | Hottest Blue-White Star </option>
+            <option value='{"Temp":28000,"BC": -2.55}'> B1 | Very, Very, Very Hot Blue-White Star </option>
+            <option value='{"Temp":26000,"BC": -2.3}'> B2 | Very, Very Hot Blue-White Star </option>
+            <option value='{"Temp":24000,"BC": -2.05}'> B3 | Very Hot  Blue-White Star </option>
+            <option value='{"Temp":22000,"BC": -1.8}'> B4 | Hot Blue-White Star </option>
+            <option value='{"Temp":20000,"BC": -1.5}'> B5 | Average Temperature Blue-White Star </option>
+            <option value='{"Temp":18000,"BC": -1.28}'> B6 | Warm Blue-White Star </option>
+            <option value='{"Temp":16000,"BC": -1.06}'> B7 | Cool Blue-White Star </option>
+            <option value='{"Temp":14000,"BC": -0.84}'> B8 | Cooler Blue-White Star </option>
+            <option value='{"Temp":12000,"BC": -0.62}'> B9 | Coolest Blue-White Star </option>
+
+            <option value='{"Temp":10000,"BC": -0.4}'> A0 | Hottest White Star
+            <option value='{"Temp":9750,"BC": -0.344}'> A1 | Very, Very, Very Hot White Star </option>
+            <option value='{"Temp":9550,"BC": -0.288}'> A2 | Very, Very Hot White Star </option>
+            <option value='{"Temp":9250,"BC": -0.232}'> A3 | Very Hot White Star </option>
+            <option value='{"Temp":9000,"BC": -0.176}'> A4 | Hot White Star </option>
+            <option value='{"Temp":8750,"BC": -0.12}'> A5 | Average Temperature White Star </option>
+            <option value='{"Temp":8500,"BC": -0.108}'> A6 | Warm White Star </option>
+            <option value='{"Temp":8250,"BC": -0.096}'> A7 | Cool White Star </option>
+            <option value='{"Temp":8000,"BC": -0.084}'> A8 | Cooler White Star </option>
+            <option value='{"Temp":7700,"BC": -0.072}'> A9 | Coolest White Star </option>
+
+            <option value='{"Temp":7200,"BC": -0.06}'> F0 | Hottest White-Yellow Star </option>
+            <option value='{"Temp":7170,"BC": -0.048}'> F1 | Very, Very, Very Hot White-Yellow Star </option>
+            <option value='{"Temp":7040,"BC": -0.036}'> F2 | Very, Very Hot White-Yellow Star </option>
+            <option value='{"Temp":6910,"BC": -0.024}'> F3 | Very Hot White-Yellow Star </option>
+            <option value='{"Temp":6780,"BC": -0.012}'> F4 | Hot White-Yellow Star </option>
+            <option value='{"Temp":6650,"BC": 0}'> F5 | Average Temperature White-Yellow Star </option>
+            <option value='{"Temp":6520,"BC": -0.006}'> F6 | Warm White-Yellow Star </option>
+            <option value='{"Temp":6390,"BC": -0.012}'> F7 | Cool White-Yellow Star </option>
+            <option value='{"Temp":6260,"BC": -0.018}'> F8 | Cooler White-Yellow Star </option>
+            <option value='{"Temp":6130,"BC": -0.024}'> F9 | Coolest White-Yellow Star </option>
+
+            <option value='{"Temp":5940,"BC": -0.03}'> G0 | Hottest Yellow Star </option>
+            <option value='{"Temp":5869,"BC": -0.038}'> G1 | Very, Very, Very Hot Yellow Star </option>
+            <option value='{"Temp":5798,"BC": -0.046}' selected> G2 | Very, Very Hot Yellow Star (Our Sun's Spectral Class) </option>
+            <option value='{"Temp":5727,"BC": -0.054}'> G3 | Very Hot Yellow Star </option>
+            <option value='{"Temp":5656,"BC": -0.062}'> G4 | Hot Yellow Star </option>
+            <option value='{"Temp":5585,"BC": -0.07}'> G5 | Average Temperature Yellow Star </option>
+            <option value='{"Temp":5514,"BC": -0.096}'> G6 | Warm Yellow Star </option>
+            <option value='{"Temp":5443,"BC": -0.122}'> G7 | Cool Yellow Star </option>
+            <option value='{"Temp":5372,"BC": -0.148}'> G8 | Cooler Yellow Star </option>
+            <option value='{"Temp":5301,"BC": -0.174}'> G9 | Coolest Yellow Star </option>
+
+            <option value='{"Temp":5150,"BC": -0.2}'> K0 | Hottest Orange Star </option>
+            <option value='{"Temp":5035,"BC": -0.28}'> K1 | Very, Very, Very Hot Orange Star </option>
+            <option value='{"Temp":4920,"BC": -0.36}'> K2 | Very, Very Hot Orange Star </option>
+            <option value='{"Temp":4805,"BC": -0.44}'> K3 | Very Hot Orange Star </option>
+            <option value='{"Temp":4690,"BC": -0.52}'> K4 | Hot Orange Star </option>
+            <option value='{"Temp":4575,"BC": -0.6}'> K5 | Average Temperature Orange Star </option>
+            <option value='{"Temp":4460,"BC": -0.72}'> K6 | Warm Orange Star </option>
+            <option value='{"Temp":4345,"BC": -0.84}'> K7 | Cool Orange Star </option>
+            <option value='{"Temp":4230,"BC": -0.96}'> K8 | Cooler Orange Star </option>
+            <option value='{"Temp":4000,"BC": -1.08}'> K9 | Coolest Orange Star </option>
+
+            <option value='{"Temp":3840,"BC": -1.2}'> M0 | Hottest Red Star </option>
+            <option value='{"Temp":3725,"BC": -1.42}'> M1 | Very, Very, Very Hot Red Star </option>
+            <option value='{"Temp":3610,"BC": -1.64}'> M2 | Very, Very Hot Red Star </option>
+            <option value='{"Temp":3495,"BC": -1.86}'> M3 | Very Hot Red Star </option>
+            <option value='{"Temp":3380,"BC": -2.08}'> M4 | Hot Red Star </option>
+            <option value='{"Temp":3265,"BC": -2.3}'> M5 | Average Temperature Red Star </option>
+            <option value='{"Temp":3150,"BC": -2.75}'> M6 | Warm Red Star </option>
+            <option value='{"Temp":3035,"BC": -3.0}'> M7 | Coolest Red Star </option>
+            <option value='{"Temp":2800,"BC": -4.0}'> M8 | Brown Dwarf (No hot enough for Nuclear Fusion) </option>
+            
+            </select>
+            </br>
+            <input id="space" type="submit" value="Create Star" class="btn btn-primary"/>
+
+            </form>
+        </div>
+        <hr>
+    </section>
+
+  <h2 class="center">Star Outputs<h2>
+  <section class="sub borders margin">
+  <h4 class="center"><strong>Mass, Diameter, Habitable Zone, and Age</strong></h4>
+  
+        <div class="thisContainer">
+        <strong>Mass of Star (in kilograms): <input class="outputs form-control" id="output1" type='text' value = '0'/></strong></br>
+        <strong>Radius of Star (in kilometers): <input class="outputs form-control" id="output2" type='text' value = '0'/></strong></br>
+        <strong>Diameter of Star (in kilometers): <input class="outputs form-control" id="output3" type='text' value = '0'/></strong></br>
+        <strong>Inner Habitable Zone (in AU): <input class="outputs form-control" id="output4" type='text' value = '0'/></strong></br>
+        <strong>Outer Habitable Zone (in AU): <input class="outputs form-control" id="output5" type='text' value = '0'/></strong></br>
+        </div>
+  </section>
+  </article>
+  <hr>
+
+  <article class="main borders">
+    <h2 class="center">Planet Inputs</h2>
+    <section class="sub borders margin">
+    <h4 class="center"><strong>Orbital Radius, Mass, Density, Surface Temperature (day and night), Normal Temperature Range </strong></h4>
+    </section>
+
+    <div class="thisContainer">
+
+    <form id="planetCreation">
+    <strong>Enter the number of Planets in your Solar System: </strong>
+    <input class="form-control" id="numberOfPlanets" type="text" value="1"/>
+    </br>
+    <input class="btn btn-primary" id="planetSubmit" type="submit"/>
+    </form>
+    </br>
+        <div id="thePlanets">
+        </div>
+    
+    
+
+    <section class="sub col-lg-6 borders margin">
+    <h3> Planet Outputs: Length of Year, Length of Day</h3>
+    </section>
+  </article>
+
+  <footer class="row">
+    <div>
+    </br>
+    </br>
+      <small>Property of Andrew Roling © 2017; created by Matthew Reed.</small>
+    </div>
+  </footer> 
+  </div>
+      <script>
+       
+      </script>
+      <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
+
+  </body>
+
+</html>

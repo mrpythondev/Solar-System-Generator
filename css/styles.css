@@ -1,0 +1,125 @@
+
+body{
+	/*background-image: url("https://media.nationalgeographic.org/assets/photos/000/285/28546_r646x475.jpg?eb4ed4495466abd2079e84ade88de6177e910e67");
+	*/
+	/*background-image: url("https://i.ytimg.com/vi/hp1V3BsBQHU/maxresdefault.jpg");*/
+	background-color: lightgray;
+	font-family: "Raleway";
+	color:black;
+}
+/*.borders{
+	border: 1px black solid;
+	*/
+}
+.stellar{
+	background-image: url("http://www.weaselinthebarley.com/space_wallpapers/1920/214570main_print.jpg");
+}
+#the-slider img{
+	width:100%;
+}
+
+.first {
+	text-align: center;
+}
+
+.page-header{
+	margin: 5px;
+	border-bottom: 1px solid lightgray;
+}
+
+.margin{
+	margin:10px 0px 0px 0px;
+}
+
+
+.thisContainer {
+        width: 500px;
+        clear: both;
+        font-size: 16px;
+    }
+ .thisContainer input {
+
+        width: 100%;
+        clear: left;
+    }
+
+ .center{
+ 	text-align: center;
+ }
+
+/*.borders{
+	border:1px solid black;
+}
+/*
+#outputs {
+	padding:20px;
+}
+
+a:link{
+	text-decoration: none;	
+}
+
+// visited link 
+a:visited {
+    color: blue;
+    
+
+}
+
+// mouse over link 
+a:hover {
+    color: red;
+}
+
+.links {
+	display:inline-block;
+
+}
+// selected link
+a:active {
+    color: green;
+}
+.navigate {
+	font-size: 18px;
+	text-align: center;
+}
+
+
+#brightness {
+	background-color: white;
+}
+#apparent {
+	background-color: white;
+}
+#distance {
+	background-color: white;
+}
+
+#spectral {
+	background-color: white;
+}
+/*#star {
+	position: absolute;
+
+}
+
+/*body {
+	font-size: 300%;
+	font-family: Georgia, Arial, Sans-Serif;
+	font-style: italic
+	font-weight: bold;
+	font-variant: small-caps;
+	color: rgba(255,0,0,.35);
+	text-align: center; 
+	vertical-align: baseline;
+	text-decoration: underline;
+	background-color: black;
+
+}
+for a specified element in HTML like <div id="name">
+use this notation to access it:
+
+#name {
+	color:blue;
+}
+*/

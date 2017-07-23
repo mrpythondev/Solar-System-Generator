@@ -1,0 +1,124 @@
+function printTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var secs = d.getSeconds();
+    document.body.innerHTML = hours+":"+mins+":"+secs;
+}
+setInterval(printTime, 1000);
+
+We declared a function printTime(), which gets the current time from the date object, and prints it to the screen.
+
+We then called the function once every second, using the setInterval method.
+
+The innerHTML property sets or returns the HTML content of an element.
+
+In our case, we are changing the HTML content of our document's body. This overwrites the content every second, instead of printing it repeatedly to the screen.
+
+
+Animations:
+
+**Need to add CSS box with a bigger box having a relative position and the smaller box having an absolute position.
+
+<body>
+		<div id="container">
+            <div id="box"> </div>
+        </div>
+</body>
+
+<style>
+#container {
+  width: 200px;
+  height: 200px;
+  background: green;
+  position: relative;
+}
+#box {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: absolute;
+}
+</style>
+<div id="container">
+   <div id="box"> </div>
+</div>
+
+//calling the function in window.onload to make sure the HTML is loaded
+window.onload = function() {
+     var pos = 0; 
+    //our box element
+    var box = document.getElementById('box');
+    var t = setInterval(move, 10);
+  
+    function move() {
+        if(pos >= 150) {
+            clearInterval(t);
+        }
+        else {
+            pos += 1;
+            box.style.left = pos+'px';
+        }
+    }
+};
+
+
+New function for displaying content:
+
+//calling the function in window.onload to make sure the HTML is loaded
+
+	<body>
+		<button id="demo">Click Me</button>
+	</body>
+
+window.onload = function() {
+    var x = document.getElementById('demo');
+    x.onclick = function () {
+        document.getElementById('demo').innerHTML = Date(); or document.body.innerHTML = Date(); replaces the body content with the date.
+    }
+};
+
+
+
+The onchange event is mostly used on textboxes. The event handler gets called when the text inside the textbox changes and focus is lost from the element.
+For example:
+
+<input type="text" id="name" onchange="change()">
+<script>
+function change() {
+ var x = document.getElementById("name");
+ x.value= x.value.toUpperCase();
+}
+</script>
+
+
+
+
+ var images = [
+    'http://www.sololearn.com/uploads/slider/1.jpg', 
+    'http://www.sololearn.com/uploads/slider/2.jpg', 
+    'http://www.sololearn.com/uploads/slider/3.jpg'
+];
+var num = 0;
+function next() {
+    var slider = document.getElementById('slider');
+    num++;
+    if(num >= images.length) {
+        num = 0;
+    }
+    slider.src = images[num];
+}
+function prev() {
+    var slider = document.getElementById('slider');
+    num--;
+    if(num < 0) {
+        num = images.length-1;
+    }
+    slider.src = images[num];
+}
+				Position property CSS
+Let's explain it better:
+- 'static' is the default position, the normal flow of the elements.
+- 'relative' takes the static positioning, and then we can modify its position with top, right, bottom and left properties.
+- 'absolute' will position an element taking as reference the nearest parent with relative position. If it has no parent, it will use the whole document (in this case, it will not scroll).
+- 'fixed' will position an element taking as reference the whole viewport directly, so it will not scroll (always fixed).
