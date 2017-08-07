@@ -47,79 +47,34 @@ body{
  	text-align: center;
  }
 
-/*.borders{
-	border:1px solid black;
-}
-/*
-#outputs {
-	padding:20px;
+ .navbar-brand {
+    font-size: 18px;
 }
 
-a:link{
-	text-decoration: none;	
+.navbar-container {
+    padding: 20px 0 20px 0;
 }
 
-// visited link 
-a:visited {
-    color: blue;
-    
-
+.navbar.navbar-fixed-top.fixed-theme {
+    background-color: #222;
+    border-color: #080808;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
 }
 
-// mouse over link 
-a:hover {
-    color: red;
+.navbar-brand.fixed-theme {
+    font-size: 18px;
 }
 
-.links {
-	display:inline-block;
-
-}
-// selected link
-a:active {
-    color: green;
-}
-.navigate {
-	font-size: 18px;
-	text-align: center;
+.navbar-container.fixed-theme {
+    padding: 0;
 }
 
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
 
-#brightness {
-	background-color: white;
-}
-#apparent {
-	background-color: white;
-}
-#distance {
-	background-color: white;
-}
 
-#spectral {
-	background-color: white;
-}
-/*#star {
-	position: absolute;
-
-}
-
-/*body {
-	font-size: 300%;
-	font-family: Georgia, Arial, Sans-Serif;
-	font-style: italic
-	font-weight: bold;
-	font-variant: small-caps;
-	color: rgba(255,0,0,.35);
-	text-align: center; 
-	vertical-align: baseline;
-	text-decoration: underline;
-	background-color: black;
-
-}
-for a specified element in HTML like <div id="name">
-use this notation to access it:
-
-#name {
-	color:blue;
-}
-*/
