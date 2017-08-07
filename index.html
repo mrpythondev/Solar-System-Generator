@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, intitial-scale=1.0">
-        <title> Solar System Builder </title>
+        <title> Solar System Generator</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -15,22 +15,35 @@
   <body>
   <div class="container">
   <header class="row borders">
-      <h1 class="stellar text-center">Solar System Builder</br><small>Generate a realistic Solar System</h1>
+      <h1 class="stellar text-center"></br></br>Solar System Generator</br><small>Generate a realistic Solar System</h1>
   </header>
 
- <nav class="navbar">
-    <ul class="nav navbar-nav">
-      <li class="borders"><a href="https://www.physics.byu.edu/faculty/christensen/Physics%20127/Figures/Nature%20of%20the%20Stars/Main%20Sequence%20Spectral%20Types,%20Temperatures%20and%20B-V%20Color%20Indices.htm">Main Sequence Stars</a></li>
-      <li class="borders"><a href="https://en.wikipedia.org/wiki/Mass%E2%80%93luminosity_relation">Mass-Luminosity Relation</a></li>
-      <li class="borders"><a href="http://www.transhuman.talktalk.net/iw/Geosync.htm">Planet Designer</a></li>
-      <li class="borders"><a href="https://en.wikipedia.org/wiki/Apparent_magnitude">Apparent Magnitude</a></li>
-      <li class="borders"><a href="http://www.planetarybiology.com/calculating_habitable_zone.html">Habitable Zone</a></li>
-       <li class="borders"><a href="https://en.wikipedia.org/wiki/Solar_luminosity">Solar Units</a></li>
-      <li class="borders"><a href="https://en.wikipedia.org/wiki/Parsec">Parsecs</a></li>
-      <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Source Code</a></li>
-      <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Donate</a></li>
-    </ul>
-  </nav>
+<!-- Fixed navbar -->
+        <nav id="header" class="navbar navbar-fixed-top">
+            <div id="header-container" class="container navbar-container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="brand" class="navbar-brand" href="#">Solar System Generator</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="borders"><a href="https://www.physics.byu.edu/faculty/christensen/Physics%20127/Figures/Nature%20of%20the%20Stars/Main%20Sequence%20Spectral%20Types,%20Temperatures%20and%20B-V%20Color%20Indices.htm">Main Sequence Stars</a></li>
+                        <li class="borders"><a href="https://en.wikipedia.org/wiki/Mass%E2%80%93luminosity_relation">Mass-Luminosity Relation</a></li>
+                        <li class="borders"><a href="https://en.wikipedia.org/wiki/Apparent_magnitude">Apparent Magnitude</a></li>
+                        <li class="borders"><a href="http://www.planetarybiology.com/calculating_habitable_zone.html">Habitable Zone</a></li>
+                        <li class="borders"><a href="https://en.wikipedia.org/wiki/Solar_luminosity">Solar Units</a></li>
+                        <li class="borders"><a href="https://en.wikipedia.org/wiki/Parsec">Parsecs</a></li>
+                        <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Source Code</a></li>
+                        <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Donate</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
   <hr>
 
   <article class="main borders">
@@ -175,12 +188,18 @@
     </br>
         <div id="thePlanets">
         </div>
-    
-    
+    </div>  
+    <hr>
 
-    <section class="sub col-lg-6 borders margin">
-    <h3> Planet Outputs: Length of Year, Length of Day</h3>
+    <h2 class="center">Planet Outputs</h2>
+    <section class="sub borders margin">
+    <h4 class="center"><strong>Length of Day and Length of Year</strong></h4>
     </section>
+    
+    <div class="thisContainer">
+        <div id="thePlanetsOutputs">
+        </div>
+    </div>
   </article>
 
   <footer class="row">
