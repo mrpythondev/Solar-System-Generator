@@ -1,3 +1,4 @@
+
 function mass(){
 	var solarUnits = $("#brightness").val();
 	var solar = solarUnits * (3.848*10**26);
@@ -66,23 +67,77 @@ $(function() {
 	$("#planetCreation").submit(function(event) {
 	
 	var numberOfPlanets = $("#numberOfPlanets").val();
-		for (i = 0; i<numberOfPlanets; i++){
-		$("#thePlanets").append('<strong>Name of Planet: <input class="outputs form-control" id="output1" type="text" placeholder="Terra"/></strong></br> <strong>Position of Planet in Solar System: <input class="outputs form-control" id="output2" type="text" placeholder="1"/></strong></br> <strong>Mass of Planet (in kilograms): <input class="outputs form-control" id="output3" type="text" value = "0"/></strong></br> <strong>Density of Planet (in g/cm^3): <input class="outputs form-control" id="output4" type="text" value = "0"/></strong></br> <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): <input class="outputs form-control" id="output5" type="text" value = "0"/></strong></br>        <strong>Average Surface Temperature of Planet (Day): <input class="outputs form-control" id="output6" type="text" value = "0"/></strong></br>        <strong>Average Surface Temperature of Planet (Night): <input class="outputs form-control" id="output7" type="text" value = "0"/></strong></br>        <strong>Rotational Speed (km/hr): <input class="outputs form-control" id="output8" type="text" value = "0"/></strong></br><hr></br>');
-		$("#thePlanetsOutputs").append('<br><strong>Length of Day: </strong><input class="planetOutputs form-control" id="planetOutput1" type="text" placeholder="24"/></strong></br> <strong>Length of Year: <input class="planetOutputs form-control" id="planetOutput2" type="text" placeholder="24"/></strong></br><hr>')
-		event.preventDefault();
-	}
+
+		switch (numberOfPlanets){
+			case "1":
+			$("#planetOne").show();
+			event.preventDefault();
+			break;
+			case "2":
+			$("#planetOne").show();
+			$("#planetTwo").show();
+			event.preventDefault();
+			break;
+			case "3":
+			$("#planetOne").show();
+			$("#planetTwo").show();
+			$("#planetThree").show();
+			event.preventDefault();
+			break;
+			case "4":
+			$("#planetOne").show();
+			$("#planetTwo").show();
+			$("#planetThree").show();
+			$("#planetFour").show();
+			event.preventDefault();
+			break;
+			case "5":
+			$("#planetOne").show();
+			$("#planetTwo").show();
+			$("#planetThree").show();
+			$("#planetFour").show();
+			$("#planetFive").show();
+			event.preventDefault();
+			break;
+			case "6":
+			$("#planetOne").show();
+			$("#planetTwo").show();
+			$("#planetThree").show();
+			$("#planetFour").show();
+			$("#planetFive").show();
+			$("#planetSix").show();
+			event.preventDefault();
+			break;
+			case "7":
+			$("#planetOne").show();
+			$("#planetTwo").show();
+			$("#planetThree").show();
+			$("#planetFour").show();
+			$("#planetFive").show();
+			$("#planetSix").show();
+			$("#planetSeven").show();
+			event.preventDefault();
+			break;
+			default:
+			alert(0);
+	};
 })
 })
 
 
 $(function() {
-	$("#output2").submit(function(event) {
- 		var mass_of_planet = $("output2").val();
- 		if (mass() * 1/3 < mass_of_planet){
- 			alert("Planet has excessive mass and will cause gravitional irregularities, which is greater than 1/3 of the Sun's mass");
+	$("#planetInputs").submit(function(event) {
+ 		var mass_of_planet = $("planetinput3").val();
+ 		alert(mass_of_planet);
+ 		if (mass() * .33 > mass_of_planet){
+ 			$("#thePlanetsOutputs").append('<br><strong>Length of Day: </strong><input class="planetOutputs form-control" id="planetOutput1" type="text" placeholder="24"/></strong></br> <strong>Length of Year: <input class="planetOutputs form-control" id="planetOutput2" type="text" placeholder="24"/></strong></br><hr>');
+ 			
+ 	}
+ 		else{
+ 			alert(mass_of_planet);
+ 			event.preventDefault();
  		}
-
-	})
+})
 })
 
 
@@ -94,6 +149,14 @@ $(document).ready(function(){
  *
  * @type {{flagAdd: boolean, elements: string[], add: Function, remove: Function}}
  */
+ $("#planetInputsSubmit").hide();
+ $("#planetOne").hide();
+ $("#planetTwo").hide();
+ $("#planetThree").hide();
+ $("#planetFour").hide();
+ $("#planetFive").hide();
+ $("#planetSix").hide();
+ $("#planetSeven").hide();
 var myNavBar = {
 
     flagAdd: true,
