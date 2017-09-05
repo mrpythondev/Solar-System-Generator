@@ -68,20 +68,41 @@ $(function() {
 	
 	var numberOfPlanets = $("#numberOfPlanets").val();
 
+	$("#planetOne").hide();
+ 	$("#planetTwo").hide();
+ 	$("#planetThree").hide();
+ 	$("#planetFour").hide();
+ 	$("#planetFive").hide();
+ 	$("#planetSix").hide();
+ 	$("#planetSeven").hide();
+ 	$("#firstPlanetOutputs").hide();
+ 	$("#secondPlanetOutputs").hide();
+ 	$("#thirdplanetOutputs").hide();
+ 	$("#fourthplanetOutputs").hide();
+ 	$("#fifthplanetOutputs").hide();
+ 	$("#sixthPlanetOutputs").hide();
+ 	$("#seventhplanetOutputs").hide();
+
 		switch (numberOfPlanets){
 			case "1":
 			$("#planetOne").show();
+			$("#firstPlanetOutputs").show();
 			event.preventDefault();
 			break;
 			case "2":
 			$("#planetOne").show();
 			$("#planetTwo").show();
+			$("#firstPlanetOutputs").show();
+			$("#secondPlanetOutputs").show();
 			event.preventDefault();
 			break;
 			case "3":
 			$("#planetOne").show();
 			$("#planetTwo").show();
 			$("#planetThree").show();
+			$("#firstPlanetOutputs").show();
+			$("#secondPlanetOutputs").show();
+			$("#thirdplanetOutputs").show();
 			event.preventDefault();
 			break;
 			case "4":
@@ -89,6 +110,10 @@ $(function() {
 			$("#planetTwo").show();
 			$("#planetThree").show();
 			$("#planetFour").show();
+			$("#firstPlanetOutputs").show();
+			$("#secondPlanetOutputs").show();
+			$("#thirdplanetOutputs").show();
+			$("#fourthplanetOutputs").show();
 			event.preventDefault();
 			break;
 			case "5":
@@ -97,6 +122,11 @@ $(function() {
 			$("#planetThree").show();
 			$("#planetFour").show();
 			$("#planetFive").show();
+			$("#firstPlanetOutputs").show();
+			$("#secondPlanetOutputs").show();
+			$("#thirdplanetOutputs").show();
+			$("#fourthplanetOutputs").show();
+			$("#fifthplanetOutputs").show();
 			event.preventDefault();
 			break;
 			case "6":
@@ -106,6 +136,12 @@ $(function() {
 			$("#planetFour").show();
 			$("#planetFive").show();
 			$("#planetSix").show();
+			$("#firstPlanetOutputs").show();
+			$("#secondPlanetOutputs").show();
+			$("#thirdplanetOutputs").show();
+			$("#fourthplanetOutputs").show();
+			$("#fifthplanetOutputs").show();
+			$("#sixthPlanetOutputs").show();
 			event.preventDefault();
 			break;
 			case "7":
@@ -116,6 +152,13 @@ $(function() {
 			$("#planetFive").show();
 			$("#planetSix").show();
 			$("#planetSeven").show();
+			$("#firstPlanetOutputs").show();
+			$("#secondPlanetOutputs").show();
+			$("#thirdplanetOutputs").show();
+			$("#fourthplanetOutputs").show();
+			$("#fifthplanetOutputs").show();
+			$("#sixthPlanetOutputs").show();
+			$("#seventhplanetOutputs").show();
 			event.preventDefault();
 			break;
 			default:
@@ -126,15 +169,66 @@ $(function() {
 
 
 $(function() {
-	$("#planetInputs").submit(function(event) {
- 		var mass_of_planet = $("planetinput3").val();
- 		alert(mass_of_planet);
- 		if (mass() * .33 > mass_of_planet){
- 			$("#thePlanetsOutputs").append('<br><strong>Length of Day: </strong><input class="planetOutputs form-control" id="planetOutput1" type="text" placeholder="24"/></strong></br> <strong>Length of Year: <input class="planetOutputs form-control" id="planetOutput2" type="text" placeholder="24"/></strong></br><hr>');
- 			
- 	}
- 		else{
- 			alert(mass_of_planet);
+	$("#planetInput1").submit(function(event) {
+ 		var massOfPlanet1 = $("planetInput3").val();
+ 		
+ 		alert(massOfPlanet1);
+ 		if (mass() *.3 <= massOfPlanet1){
+ 			alert("(1)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault();
+ 		}
+})
+})
+$(function() {
+	$("#planetInput2").submit(function(event) {
+		var massOfPlanet2 = $("planetInput13").val();
+ 		if (mass() *.3 <= massOfPlanet2){
+ 			alert("(2)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault();
+ 		}
+})
+})
+$(function() {
+	$("#planetInput3").submit(function(event) {
+		var massOfPlanet3 = $("planetInput23").val();
+ 		if (mass() *.3 <= massOfPlanet3){
+ 			alert("(3)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault();
+ 		}
+})
+})
+$(function() {
+	$("#planetInput4").submit(function(event) {
+		var massOfPlanet4 = $("planetInput33").val();
+ 		if (mass() *.3 <= massOfPlanet4){
+ 			alert("(4)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault();
+ 		}
+})
+})
+$(function() {
+	$("#planetInput5").submit(function(event) {
+		var massOfPlanet5 = $("planetInput43").val();
+ 		if (mass() *.3 <= massOfPlanet5){
+ 			alert("(5)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault();
+ 		}
+})
+})
+$(function() {
+	$("#planetInput6").submit(function(event) {
+		var massOfPlanet6 = $("planetInput53").val();
+ 		if (mass() *.3 <= massOfPlanet6){
+ 			alert("(6)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault()
+ 		}
+})
+})
+$(function() {
+	$("#planetInput7").submit(function(event) {	
+		var massOfPlanet7 = $("planetInput63").val();
+ 		if (mass() *.3 <= massOfPlanet7){
+ 			alert("(7)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
 })
@@ -157,6 +251,14 @@ $(document).ready(function(){
  $("#planetFive").hide();
  $("#planetSix").hide();
  $("#planetSeven").hide();
+ $("#firstPlanetOutputs").hide();
+ $("#secondPlanetOutputs").hide();
+ $("#thirdplanetOutputs").hide();
+ $("#fourthplanetOutputs").hide();
+ $("#fifthplanetOutputs").hide();
+ $("#sixthPlanetOutputs").hide();
+ $("#seventhplanetOutputs").hide();
+
 var myNavBar = {
 
     flagAdd: true,
