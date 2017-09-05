@@ -169,68 +169,102 @@ $(function() {
 
 
 $(function() {
-	$("#planetInput1").submit(function(event) {
- 		var massOfPlanet1 = $("planetInput3").val();
+	$("#firstPlanetInputs").submit(function(event) {
+ 		var nameOfPlanet1 = $("#planetInput1").val();
+ 		var massOfPlanet1 = $("#planetInput3").val();
  		
+ 		$("#nameOfFirstPlanet").html(nameOfPlanet1);
+
  		alert(massOfPlanet1);
  		if (mass() *.3 <= massOfPlanet1){
- 			alert("(1)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			alert("First Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 $(function() {
-	$("#planetInput2").submit(function(event) {
-		var massOfPlanet2 = $("planetInput13").val();
+	$("#secondPlanetInputs").submit(function(event) {
+		var nameOfPlanet2 = $("#planetInput11").val();
+		var massOfPlanet2 = $("#planetInput13").val();
+
+		$("#nameOfSecondPlanet").html(nameOfPlanet2);
+
  		if (mass() *.3 <= massOfPlanet2){
- 			alert("(2)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			alert("Second Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 $(function() {
-	$("#planetInput3").submit(function(event) {
-		var massOfPlanet3 = $("planetInput23").val();
+	$("#thirdPlanetInputs").submit(function(event) {
+		var nameOfPlanet3 = $("#planetInput21").val();
+		var massOfPlanet3 = $("#planetInput23").val();
+
+		$("#nameOfThirdPlanet").html(nameOfPlanet3);
+
  		if (mass() *.3 <= massOfPlanet3){
- 			alert("(3)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			alert("Third Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 $(function() {
-	$("#planetInput4").submit(function(event) {
-		var massOfPlanet4 = $("planetInput33").val();
+	$("#fourthPlanetInputs").submit(function(event) {
+		var nameOfPlanet4 = $("#planetInput31").val();
+		var massOfPlanet4 = $("#planetInput33").val();
+
+		$("#nameOfFourthPlanet").html(nameOfPlanet4);
+
  		if (mass() *.3 <= massOfPlanet4){
- 			alert("(4)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			alert("Fourth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 $(function() {
-	$("#planetInput5").submit(function(event) {
-		var massOfPlanet5 = $("planetInput43").val();
+	$("#fifthPlanetInputs").submit(function(event) {
+		var nameOfPlanet5 = $("#planetInput41").val();
+		var massOfPlanet5 = $("#planetInput43").val();
+
+		$("#nameOfFifthPlanet").html(nameOfPlanet5);
+
  		if (mass() *.3 <= massOfPlanet5){
- 			alert("(5)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			alert("Fifth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 $(function() {
-	$("#planetInput6").submit(function(event) {
-		var massOfPlanet6 = $("planetInput53").val();
+	$("#sixthPlanetInputs").submit(function(event) {
+		var nameOfPlanet6 = $("#planetInput51").val();
+		var massOfPlanet6 = $("#planetInput53").val();
+
+		$("#nameOfSixthPlanet").html(nameOfPlanet6);
+
  		if (mass() *.3 <= massOfPlanet6){
- 			alert("(6)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
- 			event.preventDefault()
+ 			alert("Sixth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 $(function() {
-	$("#planetInput7").submit(function(event) {	
-		var massOfPlanet7 = $("planetInput63").val();
+	$("#seventhPlanetInputs").submit(function(event) {
+		var nameOfPlanet7 = $("#planetInput61").val();	
+		var massOfPlanet7 = $("#planetInput63").val();
+
+		$("#nameOfSeventhPlanet").html(nameOfPlanet7);
+
  		if (mass() *.3 <= massOfPlanet7){
- 			alert("(7)Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
+ 			alert("Seventh Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
  		}
+ 		event.preventDefault();
 })
 })
 
