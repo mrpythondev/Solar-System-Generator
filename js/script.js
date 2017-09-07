@@ -172,10 +172,17 @@ $(function() {
 	$("#firstPlanetInputs").submit(function(event) {
  		var nameOfPlanet1 = $("#planetInput1").val();
  		var massOfPlanet1 = $("#planetInput3").val();
- 		
- 		$("#nameOfFirstPlanet").html(nameOfPlanet1);
+ 		var radiusOfPlanet1 = $("#planetOneRadius").val();
+		
+		var meteredRadius1 = radiusOfPlanet1*1000;
+		var constantG1 = (6.673*10**-11);
+		var planetOneGravity = (((constantG1)*(massOfPlanet1))/((meteredRadius1)**2));
 
- 		alert(massOfPlanet1);
+		var planetOneRotation = $("#planetInput8").val();
+		$("#planetOutput1").val(planetOneRotation);
+
+ 		$("#nameOfFirstPlanet").html(nameOfPlanet1);
+ 		$("#planetGravity1").val(planetOneGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet1){
  			alert("First Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
@@ -187,9 +194,17 @@ $(function() {
 	$("#secondPlanetInputs").submit(function(event) {
 		var nameOfPlanet2 = $("#planetInput11").val();
 		var massOfPlanet2 = $("#planetInput13").val();
+		var radiusOfPlanet2 = $("#planetTwoRadius").val();
+		
+		var meteredRadius2 = radiusOfPlanet2*1000;
+		var constantG2 = (6.673*10**-11);
+		var planetTwoGravity = (((constantG2)*(massOfPlanet2))/((meteredRadius2)**2));
+
+		var planetTwoRotation = $("#planetInput18").val();
+		$("#planetOutput3").val(planetTwoRotation);
 
 		$("#nameOfSecondPlanet").html(nameOfPlanet2);
-
+		$("#planetGravity2").val(planetTwoGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet2){
  			alert("Second Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
@@ -201,9 +216,17 @@ $(function() {
 	$("#thirdPlanetInputs").submit(function(event) {
 		var nameOfPlanet3 = $("#planetInput21").val();
 		var massOfPlanet3 = $("#planetInput23").val();
+		var radiusOfPlanet3 = $("#planetThreeRadius").val();
+		
+		var meteredRadius3 = radiusOfPlanet3*1000;
+		var constantG3 = (6.673*10**-11);
+		var planetThreeGravity = (((constantG3)*(massOfPlanet3))/((meteredRadius3)**2));
+
+		var planetThreeRotation = $("#planetInput28").val();
+		$("#planetOutput5").val(planetThreeRotation);
 
 		$("#nameOfThirdPlanet").html(nameOfPlanet3);
-
+		$("#planetGravity3").val(planetThreeGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet3){
  			alert("Third Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
@@ -215,9 +238,17 @@ $(function() {
 	$("#fourthPlanetInputs").submit(function(event) {
 		var nameOfPlanet4 = $("#planetInput31").val();
 		var massOfPlanet4 = $("#planetInput33").val();
+		var radiusOfPlanet4 = $("#planetFourRadius").val();
+		
+		var meteredRadius4 = radiusOfPlanet4*1000;
+		var constantG4 = (6.673*10**-11);
+		var planetFourGravity = (((constantG4)*(massOfPlanet4))/((meteredRadius4)**2));
+
+		var planetFourRotation = $("#planetInput38").val();
+		$("#planetOutput7").val(planetFourRotation);
 
 		$("#nameOfFourthPlanet").html(nameOfPlanet4);
-
+		$("#planetGravity4").val(planetFourGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet4){
  			alert("Fourth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
@@ -229,9 +260,17 @@ $(function() {
 	$("#fifthPlanetInputs").submit(function(event) {
 		var nameOfPlanet5 = $("#planetInput41").val();
 		var massOfPlanet5 = $("#planetInput43").val();
+		var radiusOfPlanet5 = $("#planetFiveRadius").val();
+		
+		var meteredRadius5 = radiusOfPlanet5*1000;
+		var constantG5 = (6.673*10**-11);
+		var planetFiveGravity = (((constantG5)*(massOfPlanet5))/((meteredRadius5)**2));
+
+		var planetFiveRotation = $("#planetInput48").val();
+		$("#planetOutput9").val(planetFiveRotation);
 
 		$("#nameOfFifthPlanet").html(nameOfPlanet5);
-
+		$("#planetGravity5").val(planetFiveGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet5){
  			alert("Fifth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
@@ -243,9 +282,17 @@ $(function() {
 	$("#sixthPlanetInputs").submit(function(event) {
 		var nameOfPlanet6 = $("#planetInput51").val();
 		var massOfPlanet6 = $("#planetInput53").val();
+		var radiusOfPlanet6 = $("#planetSixRadius").val();
+		
+		var meteredRadius6 = radiusOfPlanet6*1000;
+		var constantG6 = (6.673*10**-11);
+		var planetSixGravity = (((constantG6)*(massOfPlanet6))/((meteredRadius6)**2));
+
+		var planetSixRotation = $("#planetInput58").val();
+		$("#planetOutput11").val(planetSixRotation);
 
 		$("#nameOfSixthPlanet").html(nameOfPlanet6);
-
+		$("#planetGravity6").val(planetSixGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet6){
  			alert("Sixth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
@@ -257,9 +304,17 @@ $(function() {
 	$("#seventhPlanetInputs").submit(function(event) {
 		var nameOfPlanet7 = $("#planetInput61").val();	
 		var massOfPlanet7 = $("#planetInput63").val();
+		var radiusOfPlanet7 = $("#planetSevenRadius").val();
+		
+		var meteredRadius7 = radiusOfPlanet7*1000;
+		var constantG7 = (6.673*10**-11);
+		var planetSevenGravity = (((constantG7)*(massOfPlanet7))/((meteredRadius7)**2));
+
+		var planetSevenRotation = $("#planetInput68").val();
+		$("#planetOutput13").val(planetSevenRotation);
 
 		$("#nameOfSeventhPlanet").html(nameOfPlanet7);
-
+		$("#planetGravity7").val(planetSevenGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet7){
  			alert("Seventh Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
  			event.preventDefault();
