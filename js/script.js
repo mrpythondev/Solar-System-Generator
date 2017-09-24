@@ -171,7 +171,7 @@ $(function() {
 $(function() {
 	$("#firstPlanetInputs").submit(function(event) {
  		var nameOfPlanet1 = $("#planetInput1").val();
- 		var massOfPlanet1 = $("#planetInput3").val();
+ 		var massOfPlanet1 = 5.97219e24 * $("#planetInput3").val();
  		var radiusOfPlanet1 = $("#planetOneRadius").val();
 		
 		var meteredRadius1 = radiusOfPlanet1*1000;
@@ -179,6 +179,12 @@ $(function() {
 		var planetOneGravity = (((constantG1)*(massOfPlanet1))/((meteredRadius1)**2));
 
 		var planetOneRotation = $("#planetInput8").val();
+
+		var distanceAU1 = $("#planetInput9").val();
+		var orbitalPeriod1 = (2*Math.PI*Math.sqrt(((distanceAU1*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+
+		var correctedPeriod1 =  (orbitalPeriod1 * 0.000277778)/planetOneRotation;
+		$("#planetOutput2").val(correctedPeriod1.toPrecision(3));
 		$("#planetOutput1").val(planetOneRotation);
 
  		$("#nameOfFirstPlanet").html(nameOfPlanet1);
@@ -193,7 +199,7 @@ $(function() {
 $(function() {
 	$("#secondPlanetInputs").submit(function(event) {
 		var nameOfPlanet2 = $("#planetInput11").val();
-		var massOfPlanet2 = $("#planetInput13").val();
+		var massOfPlanet2 = 5.97219e24 * $("#planetInput13").val();
 		var radiusOfPlanet2 = $("#planetTwoRadius").val();
 		
 		var meteredRadius2 = radiusOfPlanet2*1000;
@@ -201,6 +207,13 @@ $(function() {
 		var planetTwoGravity = (((constantG2)*(massOfPlanet2))/((meteredRadius2)**2));
 
 		var planetTwoRotation = $("#planetInput18").val();
+		
+		var distanceAU2 = $("#planetInput19").val();
+		var orbitalPeriod2 = (2*Math.PI*Math.sqrt(((distanceAU2*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+		
+		var correctedPeriod2 = (orbitalPeriod2* 0.000277778)/planetTwoRotation;
+		
+		$("#planetOutput4").val(correctedPeriod2.toPrecision(3));
 		$("#planetOutput3").val(planetTwoRotation);
 
 		$("#nameOfSecondPlanet").html(nameOfPlanet2);
@@ -215,7 +228,7 @@ $(function() {
 $(function() {
 	$("#thirdPlanetInputs").submit(function(event) {
 		var nameOfPlanet3 = $("#planetInput21").val();
-		var massOfPlanet3 = $("#planetInput23").val();
+		var massOfPlanet3 = 5.97219e24 * $("#planetInput23").val();
 		var radiusOfPlanet3 = $("#planetThreeRadius").val();
 		
 		var meteredRadius3 = radiusOfPlanet3*1000;
@@ -223,6 +236,12 @@ $(function() {
 		var planetThreeGravity = (((constantG3)*(massOfPlanet3))/((meteredRadius3)**2));
 
 		var planetThreeRotation = $("#planetInput28").val();
+		var distanceAU3 = $("#planetInput29").val();
+		var orbitalPeriod3 = (2*Math.PI*Math.sqrt(((distanceAU3*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+		
+		var correctedPeriod3 = (orbitalPeriod3* 0.000277778)/planetThreeRotation;
+
+		$("#planetOutput6").val(correctedPeriod3.toPrecision(3));
 		$("#planetOutput5").val(planetThreeRotation);
 
 		$("#nameOfThirdPlanet").html(nameOfPlanet3);
@@ -237,7 +256,7 @@ $(function() {
 $(function() {
 	$("#fourthPlanetInputs").submit(function(event) {
 		var nameOfPlanet4 = $("#planetInput31").val();
-		var massOfPlanet4 = $("#planetInput33").val();
+		var massOfPlanet4 = 5.97219e24 * $("#planetInput33").val();
 		var radiusOfPlanet4 = $("#planetFourRadius").val();
 		
 		var meteredRadius4 = radiusOfPlanet4*1000;
@@ -245,6 +264,12 @@ $(function() {
 		var planetFourGravity = (((constantG4)*(massOfPlanet4))/((meteredRadius4)**2));
 
 		var planetFourRotation = $("#planetInput38").val();
+
+		var distanceAU4 = $("#planetInput39").val();
+		var orbitalPeriod4 = (2*Math.PI*Math.sqrt(((distanceAU4*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+		
+		var correctedPeriod4 = (orbitalPeriod4* 0.000277778)/planetFourRotation;
+		$("#planetOutput8").val(correctedPeriod4.toPrecision(3));
 		$("#planetOutput7").val(planetFourRotation);
 
 		$("#nameOfFourthPlanet").html(nameOfPlanet4);
@@ -259,7 +284,7 @@ $(function() {
 $(function() {
 	$("#fifthPlanetInputs").submit(function(event) {
 		var nameOfPlanet5 = $("#planetInput41").val();
-		var massOfPlanet5 = $("#planetInput43").val();
+		var massOfPlanet5 = 5.97219e24 * $("#planetInput43").val();
 		var radiusOfPlanet5 = $("#planetFiveRadius").val();
 		
 		var meteredRadius5 = radiusOfPlanet5*1000;
@@ -267,6 +292,12 @@ $(function() {
 		var planetFiveGravity = (((constantG5)*(massOfPlanet5))/((meteredRadius5)**2));
 
 		var planetFiveRotation = $("#planetInput48").val();
+		
+		var distanceAU5 = $("#planetInput49").val();
+		var orbitalPeriod5 = (2*Math.PI*Math.sqrt(((distanceAU5*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+		
+		var correctedPeriod5 = (orbitalPeriod5* 0.000277778)/planetFiveRotation;
+		$("#planetOutput10").val(correctedPeriod5.toPrecision(3));
 		$("#planetOutput9").val(planetFiveRotation);
 
 		$("#nameOfFifthPlanet").html(nameOfPlanet5);
@@ -281,7 +312,7 @@ $(function() {
 $(function() {
 	$("#sixthPlanetInputs").submit(function(event) {
 		var nameOfPlanet6 = $("#planetInput51").val();
-		var massOfPlanet6 = $("#planetInput53").val();
+		var massOfPlanet6 = 5.97219e24 * $("#planetInput53").val();
 		var radiusOfPlanet6 = $("#planetSixRadius").val();
 		
 		var meteredRadius6 = radiusOfPlanet6*1000;
@@ -289,6 +320,11 @@ $(function() {
 		var planetSixGravity = (((constantG6)*(massOfPlanet6))/((meteredRadius6)**2));
 
 		var planetSixRotation = $("#planetInput58").val();
+		var distanceAU6 = $("#planetInput59").val();
+		var orbitalPeriod6 = (2*Math.PI*Math.sqrt(((distanceAU6*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+		
+		var correctedPeriod6 = (orbitalPeriod6* 0.000277778)/planetSixRotation;
+		$("#planetOutput12").val(correctedPeriod6.toPrecision(3));
 		$("#planetOutput11").val(planetSixRotation);
 
 		$("#nameOfSixthPlanet").html(nameOfPlanet6);
@@ -303,7 +339,7 @@ $(function() {
 $(function() {
 	$("#seventhPlanetInputs").submit(function(event) {
 		var nameOfPlanet7 = $("#planetInput61").val();	
-		var massOfPlanet7 = $("#planetInput63").val();
+		var massOfPlanet7 = 5.97219e24 * $("#planetInput63").val();
 		var radiusOfPlanet7 = $("#planetSevenRadius").val();
 		
 		var meteredRadius7 = radiusOfPlanet7*1000;
@@ -311,6 +347,11 @@ $(function() {
 		var planetSevenGravity = (((constantG7)*(massOfPlanet7))/((meteredRadius7)**2));
 
 		var planetSevenRotation = $("#planetInput68").val();
+		var distanceAU7 = $("#planetInput69").val();
+		var orbitalPeriod7 = (2*Math.PI*Math.sqrt(((distanceAU7*1.496*10**11)**3)/(6.67408 * 10**-11 *mass())));
+		
+		var correctedPeriod7 = (orbitalPeriod7* 0.000277778)/planetSevenRotation;
+		$("#planetOutput14").val(correctedPeriod7.toPrecision(3));
 		$("#planetOutput13").val(planetSevenRotation);
 
 		$("#nameOfSeventhPlanet").html(nameOfPlanet7);
