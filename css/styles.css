@@ -1,28 +1,20 @@
-
 body{
-	
-	background-color: lightgray;
-	font-family: "Raleway";
-	color:black;
+   
+    background-color: lightgray;
+    font-family: "Raleway";
+    color:black;
 }
-.stellar{
-	background-image: url("http://www.weaselinthebarley.com/space_wallpapers/1920/214570main_print.jpg");
-}
-#the-slider img{
-	width:100%;
-}
-
 .first {
-	text-align: center;
+    text-align: center;
 }
 
 .page-header{
-	margin: 5px;
-	border-bottom: 1px solid lightgray;
+    margin: 5px;
+    border-bottom: 1px solid lightgray;
 }
 
 .margin{
-	margin:10px 0px 0px 0px;
+    margin:10px 0px 0px 0px;
 }
 
 
@@ -37,23 +29,12 @@ body{
         clear: left;
     }
 
-.aContainer {
-        width: 500px;
-        clear: both;
-        font-size: 16px;
-    }
- .aContainer input {
-
-        width: 100%;
-        clear: left;
-    }
-
  .center{
- 	text-align: center;
+    text-align: center;
  }
 
  .navbar-brand {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .navbar-container {
@@ -67,7 +48,7 @@ body{
 }
 
 .navbar-brand.fixed-theme {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .navbar-container.fixed-theme {
@@ -81,5 +62,3 @@ body{
 .navbar-container{
     transition: 0.8s;
     -webkit-transition:  0.8s;
-
-
