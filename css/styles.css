@@ -1,15 +1,9 @@
 
 body{
-	/*background-image: url("https://media.nationalgeographic.org/assets/photos/000/285/28546_r646x475.jpg?eb4ed4495466abd2079e84ade88de6177e910e67");
-	*/
-	/*background-image: url("https://i.ytimg.com/vi/hp1V3BsBQHU/maxresdefault.jpg");*/
+	
 	background-color: lightgray;
 	font-family: "Raleway";
 	color:black;
-}
-/*.borders{
-	border: 1px black solid;
-	*/
 }
 .stellar{
 	background-image: url("http://www.weaselinthebarley.com/space_wallpapers/1920/214570main_print.jpg");
@@ -38,6 +32,17 @@ body{
         font-size: 16px;
     }
  .thisContainer input {
+
+        width: 100%;
+        clear: left;
+    }
+
+.aContainer {
+        width: 500px;
+        clear: both;
+        font-size: 16px;
+    }
+ .aContainer input {
 
         width: 100%;
         clear: left;
