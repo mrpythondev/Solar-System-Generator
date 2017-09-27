@@ -1,4 +1,4 @@
-
+//function that calculates the mass of the star using user inputs
 function mass(){
 	var solarUnits = $("#brightness").val();
 	var solar = solarUnits * (3.848*10**26);
@@ -13,13 +13,13 @@ function mass(){
 			return mass;
 		}
 	}
-	
+//generates an unique random value for star 	
 function getRandomIntInclusive() {
         min = Math.ceil(1);
         max = Math.floor(100);
         return (Math.floor(Math.random() * (max - min + 1)) + min);
 }
-	
+//Used in calculating the habitable zone
 function spectralClass(){
     var differ = getRandomIntInclusive();
     var obj = JSON.parse($("#spectral").val());
@@ -27,7 +27,7 @@ function spectralClass(){
 	var starType = (spectral - differ);
 	return starType;
 		}
-		
+//function that creates a comparable habitable zone overlay to the user generated solar system		
 function habitableZone(){
 	var apparent = $("#apparent").val();
 	var obj = JSON.parse($("#spectral").val());
@@ -42,7 +42,7 @@ function habitableZone(){
 
 
 }
-
+//Calculations and sending values to star outputs
 $(function() {
 	$("#star").submit(function(event) {
 	var y = spectralClass();
@@ -62,7 +62,7 @@ $(function() {
 	event.preventDefault();
 })
 })
-
+//hides/shows values for number of planets user has chosen for their solar system
 $(function() {
 	$("#planetCreation").submit(function(event) {
 	
@@ -167,7 +167,7 @@ $(function() {
 })
 })
 
-
+//calculations for planetary inputs
 $(function() {
 	$("#firstPlanetInputs").submit(function(event) {
  		var nameOfPlanet1 = $("#planetInput1").val();
@@ -196,6 +196,7 @@ $(function() {
  		event.preventDefault();
 })
 })
+//calculations for planetary inputs
 $(function() {
 	$("#secondPlanetInputs").submit(function(event) {
 		var nameOfPlanet2 = $("#planetInput11").val();
@@ -225,6 +226,7 @@ $(function() {
  		event.preventDefault();
 })
 })
+//calculations for planetary inputs
 $(function() {
 	$("#thirdPlanetInputs").submit(function(event) {
 		var nameOfPlanet3 = $("#planetInput21").val();
@@ -253,6 +255,7 @@ $(function() {
  		event.preventDefault();
 })
 })
+//calculations for planetary inputs
 $(function() {
 	$("#fourthPlanetInputs").submit(function(event) {
 		var nameOfPlanet4 = $("#planetInput31").val();
@@ -281,6 +284,7 @@ $(function() {
  		event.preventDefault();
 })
 })
+//calculations for planetary inputs
 $(function() {
 	$("#fifthPlanetInputs").submit(function(event) {
 		var nameOfPlanet5 = $("#planetInput41").val();
@@ -309,6 +313,7 @@ $(function() {
  		event.preventDefault();
 })
 })
+//calculations for planetary inputs
 $(function() {
 	$("#sixthPlanetInputs").submit(function(event) {
 		var nameOfPlanet6 = $("#planetInput51").val();
@@ -336,6 +341,7 @@ $(function() {
  		event.preventDefault();
 })
 })
+//calculations for planetary inputs
 $(function() {
 	$("#seventhPlanetInputs").submit(function(event) {
 		var nameOfPlanet7 = $("#planetInput61").val();	
@@ -364,7 +370,7 @@ $(function() {
 })
 })
 
-
+//hides planets on loading page/also nav bar functions
 $(document).ready(function(){
 
 /**
