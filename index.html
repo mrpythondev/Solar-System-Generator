@@ -13,9 +13,10 @@
     </head>
 
   <body>
-  <div class="container">
+  <div>
   <header class="row borders">
-      <h1 class="stellar text-center"><br><br>Solar System Generator<br><small>Generate a realistic Solar System</small></h1>
+    <br>
+      <h1 class="stellar text-center title"><br><br>Solar System Generator<br><small class="subHeader">Generate a realistic Solar System</small></h1>
   </header>
 
 <!-- Fixed navbar -->
@@ -28,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a id="brand" class="navbar-brand" href="#">Solar System Generator</a>
+                    <a id="brand" class="navbar-brand" href="#">Solar System App</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -38,39 +39,39 @@
                         <li class="borders"><a href="http://www.planetarybiology.com/calculating_habitable_zone.html">Habitable Zone</a></li>
                         <li class="borders"><a href="https://en.wikipedia.org/wiki/Solar_luminosity">Solar Units</a></li>
                         <li class="borders"><a href="https://en.wikipedia.org/wiki/Parsec">Parsecs</a></li>
-                        <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Source Code</a></li>
-                        <li class="borders"><a href="https://github.com/Matrimreed/Solar_System_Builder_App">Donate</a></li>
+                        <li class="borders"><a href="https://github.com/Matrimreed">Source Code</a></li>
+                        <li class="borders"><a href="https://www.paypal.com/donate/?token=ACE_HmfgNE03BTZVHsASWcUJU6TuVLtKe-t24ENj9W3eTU1xpAJj8e-sisHAGYykdB_6O0&country.x=US&locale.x=US">Donate</a></li>
                     </ul>
                 </div><!-- /.nav-collapse -->
             </div><!-- /.container -->
         </nav><!-- /.navbar -->
   <hr>
 
-  <article class="main borders">
-  <h2 class="center">Create a Star</h2>
+  <article class="container main borders">
 
-     <section class="sub row borders margin"><!-- section containing user-inputs for Star Generation-->
-  <h4 class="center"><strong>Star Inputs: Generate a Star by using Luminosity, Apparent Magnitude, Distance (in Parsecs), and Spectral Class</strong></h4><br>
-    
-    <div class="thisContainer">  
+     <section class="sub row borders margin col-sm-6"><!-- section containing user-inputs for Star Generation-->
+      <h2 class="center title">Star Inputs</h2>
+      <h4><strong class="subHeader">Luminosity, Apparent Magnitude, Distance, and Spectral Class</strong></h4>
+      <br>
+      <div>  
     
   
         
         <form id="star"><!--form containing Star inputs-->
         
-        <label for="brightness">1) Enter Luminosity in Solar Units (Sun's Luminosity = 1 Solar Unit): </label>
-        <input class="form-control" id="brightness" type="text" value="1" autofocus/><!--Luminosity Input for Star Mass Calculation/Output--><br>
+        <strong>1) Enter Luminosity in Solar Units (Sun's Luminosity = 1 Solar Unit):
+        <input class="form-control" id="brightness" type="text" value="1" autofocus/> </strong><!--Luminosity Input for Star Mass Calculation/Output--><br>
       
-        <label for="apparent">2) Enter Apparent Magnitude (mv): </label>
-        <input class="form-control" id="apparent" type="text" value="-26.74"/><!-- Apparent Magnitude for Star, effects Habitable Zone Output--><br>
+        <strong>2) Enter Apparent Magnitude (mv): 
+        <input class="form-control" id="apparent" type="text" value="-26.74"/></strong><!-- Apparent Magnitude for Star, effects Habitable Zone Output--><br>
         
 
-        <label for="distance">3) Enter how far away your new star is from the Earth ( in <abbr title="Parallax of one arcsecond">Parsecs</abbr>): </label>
+        <strong>3) Enter how far away your new star is from the Earth ( in <abbr title="Parallax of one arcsecond">Parsecs</abbr>): 
         <input class="form-control" id="distance" type="text" value="0.000004848" 
-        /> <!-- Distance Input in Parsecs for Star Size calculation-->
+        /></strong><!-- Distance Input in Parsecs for Star Size calculation-->
         
         <br>
-        <label for="spectral">4)<!-- selection for star classification, effects Habitable Zone Output--> Choose your type of star:</label><select class="form-control" form="star" id="spectral" name="spectalClass">
+        <strong>4)<!-- selection for star classification, effects Habitable Zone Output--> Choose your type of star: <select class="form-control" form="star" id="spectral" name="spectalClass">
             <option value='{"Temp":52000,"BC": -5.1}'> O0 | Hottest Blue Star </option>
             <option value='{"Temp":50000,"BC": -4.9}'> O1 | Very, Very, Very Hot Blue Star </option>
             <option value='{"Temp":48000,"BC": -4.8}'> O2 | Very, Very Hot Blue Star </option>
@@ -147,20 +148,19 @@
             <option value='{"Temp":3035,"BC": -3.0}'> M7 | Coolest Red Star </option>
             <option value='{"Temp":2800,"BC": -4.0}'> M8 | Brown Dwarf (No hot enough for Nuclear Fusion) </option>
             
-            </select>
+            </select></strong>
             <br>
             <input id="space" type="submit" value="Create Star" class="btn btn-primary"/><!-- Submit Star Inputs Btn-->
-
             </form>
         </div>
-        <hr> <!-- horizontal dividing line-->
-    </section>
-
-  <h2 class="center">Star Outputs</h2>
-  <section class="sub borders margin"><!--Star Outputs Section-->
-  <h4 class="center"><strong>Mass, Diameter, Habitable Zone, and Age</strong></h4>
-  
-      <div class="thisContainer"><!-- Div containing all Star Outputs-->
+        </section>
+        
+        
+        <section class="sub borders margin col-sm-6"><!--Star Outputs Section-->
+        <h2 class="center title">Star Outputs</h2>
+        <h4 class="center subHeader"><strong>Mass, Diameter, Habitable Zone, and Age</strong></h4>
+        <br>
+        <div><!-- Div containing all Star Outputs-->
         <strong>Mass of Star (in kilograms): <input class="outputs form-control" id="output1" type='text' value = '0'/></strong><br>
         <strong>Radius of Star (in kilometers): <input class="outputs form-control" id="output2" type='text' value = '0'/></strong><br>
         <strong>Diameter of Star (in kilometers): <input class="outputs form-control" id="output3" type='text' value = '0'/></strong><br>
@@ -169,40 +169,49 @@
       </div>
   </section>
   </article>
-  <hr> <!-- horizontal dividing line-->
 
-  <article class="main borders">
-    <h2 class="center">Planet Inputs</h2> 
-    <section class="sub borders margin"> <!-- section containing planetary inputs-->
-    <h4 class="center"><strong>Orbital Radius, Mass, Density, Surface Temperature (day and night), Normal Temperature Range </strong></h4>
-    </section>
+  <hr>
+   
 
-    <div class="thisContainer">
+  <article class="container main borders">
+
+    
+    <div class="sub borders margin"> <!-- section containing planetary inputs-->
+      <h2 class="center title">Planet Inputs</h2> 
+      <h4 class="center"><strong class="subHeader">Orbital Radius, Mass, Density, Surface Temperature (day and night), Normal Temperature Range </strong></h4>
+    <div class="col-sm-3"></div>
+
+    <div class="col-sm-6">
 
       <form id="planetCreation"> <!-- this form shows/hides # of planets-->
-        <strong>Enter the number of Planets in your Solar System: </strong>
+        <strong>Enter the number of Planets in your Solar System (up to seven): </strong>
         <input class="form-control" id="numberOfPlanets" type="text" value="1"/>
         <br>
         <input class="btn btn-primary" id="planetSubmit" type="submit"/>
       </form>
       <br>
     </div>
-
-    <div class="aContainer">
-      <div id="planetInputsSection">
+</div>
+<div class="col-sm-3"></div>
+<br>
+</article>
+<hr>
+    <article class="container main borders">
+    <section class="sub borders margin col-sm-6">
 
         <form id="firstPlanetInputs"> <!-- first planets inputs-->
         <div id="planetOne">
+          <h3 id="nameOfFirstPlanet" class="title">First Planet Inputs</h3><br>
           <strong>Name of Planet: </strong>
           <input class="outputs form-control" id="planetInput1" type="text" value="Terra"/><br>
           <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput2" type="text" placeholder="1"/><br>
+          <input class="outputs form-control" id="planetInput2" type="text" value="1"/><br>
           <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput3" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetOneRadius" type="text" placeholder="6371"/><br>
+          <input class="outputs form-control" id="planetInput3" type="text" value = "1"/><br>
+          <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+          <input class="outputs form-control" id="planetOneRadius" type="text" value ="1"/><br>
           <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput4" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
+          <input class="outputs form-control" id="planetInput4" type="number" step="any" min="0.5" max="10" value = "1"/><br> 
           <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
           <input class="outputs form-control" id="planetInput5" type="text" value = "0"/><br> 
           <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
@@ -210,55 +219,97 @@
           <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
           <input class="outputs form-control" id="planetInput7" type="text" value = "0"/><br> 
           <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput8" type="number" min="0" max="240" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput8" type="number" min="0" max="240" value = "24"/><br>
           <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput9" type="text" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput9" type="text" value = "1"/><br>
           <strong>Notes (Custom Details): </strong>
           <input class="outputs form-control" id="planetInput10" type="text"><br>
-          <input class="btn btn-primary" id="planetSubmit1" type="submit"><hr><br>
+          <input class="btn btn-primary" id="planetSubmit1" type="submit">
         </div>
         </form>
-    
-        <form id="secondPlanetInputs"> <!-- second planets inputs-->
-        <div id="planetTwo">
-          <strong>Name of Planet: </strong>
-          <input class="outputs form-control" id="planetInput11" type="text" value="Lune"/><br>
-          <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput12" type="text" placeholder="2"/><br>
-          <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput13" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetTwoRadius" type="text" placeholder="6371"/><br>
-          <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput14" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
-          <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
-          <input class="outputs form-control" id="planetInput15" type="text" value = "0"/><br> 
-          <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
-          <input class="outputs form-control" id="planetInput16" type="text" value = "0"/><br> 
-          <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
-          <input class="outputs form-control" id="planetInput17" type="text" value = "0"/><br> 
-          <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput18" type="number" min="0" max="240" value = "0"/><br>
-          <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput19" type="text" value = "0"/><br>
-          <strong>Notes (Custom Details): </strong>
-          <input class="outputs form-control" id="planetInput20" type="text"><br>
-          <input class="btn btn-primary" id="planetSubmit2" type="submit"><hr><br>
-        </div>
-        </form>
+      </section>
 
+      <section class="sub borders margin col-sm-6"> <!-- Section containing all of the planetary outputs-->
+        <div id="thePlanetsOutputs"><span id="firstPlanetOutputs">
+          <h3 id="nameOfFirstPlanetOutputs" class="title">First Planet Outputs</h3><br>
+          <strong>Gravity (in m/s^2): 
+          <input class="planetOutputs form-control" id="planetGravity1" type="text" placeholder="9.8"/></strong><br>
+          <strong>Length of Day (given in hours): 
+          <input class="planetOutputs form-control" id="planetOutput1" type="text" placeholder="24"/></strong><br>
+          <strong>Length of Year (given in this Planet's Days): 
+          <input class="planetOutputs form-control" id="planetOutput2" type="text" placeholder="365"/></strong><br>
+        </span>
+        </div>
+
+    </section>
+    </article>
+    <hr id="hr1">
+
+
+    <article class="container main borders"><!-- Second Planet-->
+      <section class="sub borders margin col-sm-6">
+        
+        <form id="secondPlanetInputs"> <!-- second planets inputs-->
+          <div id="planetTwo">
+            <h3 id="nameOfSecondPlanet" class="title">Second Planet Inputs</h3><br>
+            <strong id="nameOfSecondPlanet">Name of Second Planet: </strong><br>
+            <input class="outputs form-control" id="planetInput11" type="text" value="Lune"/><br>
+            <strong>Position of Planet in Solar System: </strong>
+            <input class="outputs form-control" id="planetInput12" type="text" value="2"/><br>
+            <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
+            <input class="outputs form-control" id="planetInput13" type="text" value = "1"/><br>
+            <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+            <input class="outputs form-control" id="planetTwoRadius" type="text" value ="1"/><br>
+            <strong>Density of Planet (in g/cm^3): </strong>
+            <input class="outputs form-control" id="planetInput14" type="number" step="any" min="0.5" max="10" value ="1"/><br> 
+            <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
+            <input class="outputs form-control" id="planetInput15" type="text" value = "0"/><br> 
+            <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
+            <input class="outputs form-control" id="planetInput16" type="text" value = "0"/><br> 
+            <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
+            <input class="outputs form-control" id="planetInput17" type="text" value = "0"/><br> 
+            <strong>Rotational Speed (in hours): </strong>
+            <input class="outputs form-control" id="planetInput18" type="number" min="0" max="240" value = "24"/><br>
+            <strong>Orbital Radius (in AU from Star): </strong>
+            <input class="outputs form-control" id="planetInput19" type="text" value = "1"/><br>
+            <strong>Notes (Custom Details): </strong>
+            <input class="outputs form-control" id="planetInput20" type="text"><br>
+            <input class="btn btn-primary" id="planetSubmit2" type="submit">
+        </div>
+        </form>
+      </section>
+
+      <section class="sub borders margin col-sm-6">
+        <div id="secondPlanetOutputs"><!-- Second Planet's Outputs-->
+          <h3 id="nameOfSecondPlanetOutputs" class="title">Second Planet Outputs</h3><br>
+          <strong>Gravity (in m/s^2): 
+          <input class="planetOutputs form-control" id="planetGravity2" type="text" placeholder="9.8"/></strong><br>
+          <strong>Length of Day (given in hours): 
+          <input class="planetOutputs form-control" id="planetOutput3" type="text" placeholder="24"/></strong><br>
+          <strong>Length of Year (given in this Planet's Days): 
+          <input class="planetOutputs form-control" id="planetOutput4" type="text" placeholder="365"/></strong><br>
+        </div>
+
+    </section>
+  </article>
+  <hr id="hr2">
+
+    <article class="container main borders">
+      <section class="sub borders margin col-sm-6">
+        
         <form id="thirdPlanetInputs"> <!-- third planets inputs-->
         <div id="planetThree">
+          <h3 id="nameOfThirdPlanet" class="title">Third Planet Inputs</h3><br>
           <strong>Name of Planet: </strong>
           <input class="outputs form-control" id="planetInput21" type="text" value="Dios"/><br>
           <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput22" type="text" placeholder="3"/><br>
+          <input class="outputs form-control" id="planetInput22" type="text" value="3"/><br>
           <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput23" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetThreeRadius" type="text" placeholder="6371"/><br>
+          <input class="outputs form-control" id="planetInput23" type="text" value = "1"/><br>
+          <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+          <input class="outputs form-control" id="planetThreeRadius" type="text" value ="1"/><br>
           <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput24" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
+          <input class="outputs form-control" id="planetInput24" type="number" step="any" min="0.5" max="10" value = "1"/><br> 
           <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
           <input class="outputs form-control" id="planetInput25" type="text" value = "0"/><br> 
           <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
@@ -266,27 +317,48 @@
           <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
           <input class="outputs form-control" id="planetInput27" type="text" value = "0"/><br> 
           <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput28" type="number" min="0" max="240" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput28" type="number" min="0" max="240" value = "24"/><br>
           <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput29" type="text" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput29" type="text" value = "1"/><br>
           <strong>Notes (Custom Details): </strong>
           <input class="outputs form-control" id="planetInput30" type="text"><br>
-          <input class="btn btn-primary" id="planetSubmit3" type="submit"><hr><br>
+          <input class="btn btn-primary" id="planetSubmit3" type="submit">
         </div>
         </form>
+      </section>
+      
+      <section class="sub borders margin col-sm-6">
+
+        <div id="thirdplanetOutputs"> <!-- Third Planet's Outputs-->
+          <h3 id="nameOfThirdPlanetOutputs" class="title">Third Planet Outputs</h3><br>
+          <strong>Gravity (in m/s^2): 
+          <input class="planetOutputs form-control" id="planetGravity3" type="text" placeholder="9.8"/></strong><br>
+          <strong>Length of Day (given in hours): 
+          <input class="planetOutputs form-control" id="planetOutput5" type="text" placeholder="24"/></strong><br>
+          <strong>Length of Year (given in this Planet's Days): 
+          <input class="planetOutputs form-control" id="planetOutput6" type="text" placeholder="365"/></strong>
+        </div>
+      
+      </section>
+    </article>
+    <hr id="hr3">
+
+    <article class="container main borders">
+      <section class="sub borders margin col-sm-6">
 
         <form id="fourthPlanetInputs"> <!-- fourth planets inputs-->
         <div id="planetFour">
-          <strong>Name of Planet: </strong>
+          <h3 id="nameOfFourthPlanet" class="title">Fourth Planet Inputs</h3><br>
+          <strong>Name of Planet: </strong><br>
           <input class="outputs form-control" id="planetInput31" type="text" value="Ergo"/><br>
           <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput32" type="text" placeholder="4"/><br>
+          <input class="outputs form-control" id="planetInput32" type="text" value="4"/><br>
           <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput33" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetFourRadius" type="text" placeholder="6371"/><br>
+          <input class="outputs form-control" id="planetInput33" type="text" value = "1"/><br>
+          <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+          <input class="outputs form-control" id="planetFourRadius" type="text" value ="1"/><br>
           <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput34" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
+          <input class="outputs form-control" id="planetInput34" type="number" step="any" min="0.5" max="10" value = "1"/><br> 
           <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
           <input class="outputs form-control" id="planetInput35" type="text" value = "0"/><br> 
           <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
@@ -294,27 +366,46 @@
           <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
           <input class="outputs form-control" id="planetInput37" type="text" value = "0"/><br> 
           <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput38" type="number" min="0" max="240" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput38" type="number" min="0" max="240" value = "24"/><br>
           <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput39" type="text" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput39" type="text" value = "1"/><br>
           <strong>Notes (Custom Details): </strong>
           <input class="outputs form-control" id="planetInput40" type="text"><br>
-          <input class="btn btn-primary" id="planetSubmit4" type="submit"><hr><br>
+          <input class="btn btn-primary" id="planetSubmit4" type="submit">
         </div>
         </form>
+      </section>
+
+      <section class="sub borders margin col-sm-6">
+        <div id="fourthplanetOutputs"> <!-- Fourth Planet's Outputs-->
+        <h3 id="nameOfFourthPlanetOutputs" class="title">Fourth Planet Outputs</h3><br>
+        <strong>Gravity (in m/s^2): 
+        <input class="planetOutputs form-control" id="planetGravity4" type="text" placeholder="9.8"/></strong><br>
+        <strong>Length of Day (given in hours): 
+        <input class="planetOutputs form-control" id="planetOutput7" type="text" placeholder="24"/></strong><br>
+        <strong>Length of Year (given in this Planet's Days): 
+        <input class="planetOutputs form-control" id="planetOutput8" type="text" placeholder="365"/></strong>
+      </div>
+      </section>
+    </article>
+    <hr id="hr4">
+
+    <article class="container main borders">
+      <section class="sub borders margin col-sm-6">
 
         <form id="fifthPlanetInputs"> <!-- fifth planets inputs-->
          <div id="planetFive">
+          <h3 id="nameOfFifthPlanet" class="title">Fifth Planet Inputs</h3><br>
           <strong>Name of Planet: </strong>
           <input class="outputs form-control" id="planetInput41" type="text" value="Serine"/><br>
           <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput42" type="text" placeholder="5"/><br>
+          <input class="outputs form-control" id="planetInput42" type="text" value="5"/><br>
           <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput43" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetFiveRadius" type="text" placeholder="6371"/><br>
+          <input class="outputs form-control" id="planetInput43" type="text" value = "1"/><br>
+          <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+          <input class="outputs form-control" id="planetFiveRadius" type="text" value ="1"/><br>
           <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput44" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
+          <input class="outputs form-control" id="planetInput44" type="number" step="any" min="0.5" max="10" value = "1"/><br> 
           <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
           <input class="outputs form-control" id="planetInput45" type="text" value = "0"/><br> 
           <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
@@ -322,27 +413,47 @@
           <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
           <input class="outputs form-control" id="planetInput47" type="text" value = "0"/><br> 
           <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput48" type="number" min="0" max="240" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput48" type="number" min="0" max="240" value = "24"/><br>
           <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput49" type="text" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput49" type="text" value = "1"/><br>
           <strong>Notes (Custom Details): </strong>
           <input class="outputs form-control" id="planetInput50" type="text"><br>
-          <input class="btn btn-primary" id="planetSubmit5" type="submit"><hr><br>
+          <input class="btn btn-primary" id="planetSubmit5" type="submit">
         </div>
         </form>
+      </section>
+
+      <section class="sub borders margin col-sm-6">
+        <div id="fifthplanetOutputs"> <!-- Fifth Planet's Outputs-->
+          <h3 id="nameOfFifthPlanetOutputs" class="title">Fifth Planet Outputs</h3><br>
+          <strong>Gravity (in m/s^2): 
+          <input class="planetOutputs form-control" id="planetGravity5" type="text" placeholder="9.8"/></strong><br>
+          <strong>Length of Day (given in hours): 
+          <input class="planetOutputs form-control" id="planetOutput9" type="text" placeholder="24"/></strong><br>
+          <strong>Length of Year (given in this Planet's Days): 
+          <input class="planetOutputs form-control" id="planetOutput10" type="text" placeholder="365"/></strong>
+        </div>
+      </section>
+    </article>
+    <hr id="hr5">
+
+
+    <article class="container main borders">
+      <section class="sub borders margin col-sm-6">
 
         <form id="sixthPlanetInputs"> <!-- sixth planets inputs-->
         <div id="planetSix">
+          <h3 id="nameOfSixthPlanet" class="title">Sixth Planet Inputs</h3><br>
           <strong>Name of Planet: </strong>
           <input class="outputs form-control" id="planetInput51" type="text" value="Overn"/><br>
           <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput52" type="text" placeholder="6"/><br>
+          <input class="outputs form-control" id="planetInput52" type="text" value="6"/><br>
           <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput53" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetSixRadius" type="text" placeholder="6371"/><br>
+          <input class="outputs form-control" id="planetInput53" type="text" value = "1"/><br>
+          <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+          <input class="outputs form-control" id="planetSixRadius" type="text" value ="1"/><br>
           <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput54" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
+          <input class="outputs form-control" id="planetInput54" type="number" step="any" min="0.5" max="10" value = "1"/><br> 
           <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
           <input class="outputs form-control" id="planetInput55" type="text" value = "0"/><br> 
           <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
@@ -350,27 +461,47 @@
           <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
           <input class="outputs form-control" id="planetInput57" type="text" value = "0"/><br> 
           <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput58" type="number" min="0" max="240" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput58" type="number" min="0" max="240" value = "24"/><br>
           <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput59" type="text" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput59" type="text" value = "1"/><br>
           <strong>Notes (Custom Details): </strong>
           <input class="outputs form-control" id="planetInput60" type="text"><br>
-          <input class="btn btn-primary" id="planetSubmit6" type="submit"><hr><br>
+          <input class="btn btn-primary" id="planetSubmit6" type="submit">
         </div>
         </form>
+      </section>
+      
+      <section class="sub borders margin col-sm-6">
+        <div id="sixthPlanetOutputs"> <!-- Sixth Planet's Outputs-->
+          <h3 id="nameOfSixthPlanetOutputs" class="title">Sixth Planet Outputs</h3><br>
+          <strong>Gravity (in m/s^2): 
+          <input class="planetOutputs form-control" id="planetGravity6" type="text" placeholder="9.8"/></strong><br>
+          <strong>Length of Day: 
+          <input class="planetOutputs form-control" id="planetOutput11" type="text" placeholder="24"/></strong><br>
+          <strong>Length of Year (given in this Planet's Days): 
+          <input class="planetOutputs form-control" id="planetOutput12" type="text" placeholder="365"/></strong>
+        </div>
+      
+      </section>
+    </article>
+    <hr id="hr6">
+
+    <article class="container main borders">
+      <section class="sub borders margin col-sm-6">
 
         <form id="seventhPlanetInputs"> <!-- seventh planets inputs-->
         <div id="planetSeven">
+          <h3 id="nameOfSeventhPlanet" class="title">Seventh Planet Inputs</h3><br>
           <strong>Name of Planet: </strong>
           <input class="outputs form-control" id="planetInput61" type="text" value="Cyprus"/><br>
           <strong>Position of Planet in Solar System: </strong>
-          <input class="outputs form-control" id="planetInput62" type="text" placeholder="7"/><br>
+          <input class="outputs form-control" id="planetInput62" type="text" value="7"/><br>
           <strong>Mass of Planet (Input is times the mass of Earth (ratio)): </strong>
-          <input class="outputs form-control" id="planetInput63" type="text" value = "0"/><br>
-          <strong>Radius of Planet (in kilometers (Earth = 6,371 km)): </strong>
-          <input class="outputs form-control" id="planetSevenRadius" type="text" placeholder="6371"/><br>
+          <input class="outputs form-control" id="planetInput63" type="text" value = "1"/><br>
+          <strong>Radius of Planet (Input is times the radius of Earth (ratio)): </strong>
+          <input class="outputs form-control" id="planetSevenRadius" type="text" value ="1"/><br>
           <strong>Density of Planet (in g/cm^3): </strong>
-          <input class="outputs form-control" id="planetInput64" type="number" step="any" min="0.5" max="10" value = "0"/><br> 
+          <input class="outputs form-control" id="planetInput64" type="number" step="any" min="0.5" max="10" value = "1"/><br> 
           <strong>Axial Tilt of Planet (Axial tilt of Earth is 23.439&deg; ): </strong>
           <input class="outputs form-control" id="planetInput65" type="text" value = "0"/><br> 
           <strong>Average Surface Temperature of Planet during the day (in Fahrenheit): </strong>
@@ -378,113 +509,46 @@
           <strong>Average Surface Temperature of Planet during the night (in Fahrenheit): </strong>
           <input class="outputs form-control" id="planetInput67" type="text" value = "0"/><br> 
           <strong>Rotational Speed (in hours): </strong>
-          <input class="outputs form-control" id="planetInput68" type="number" min="0" max="240" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput68" type="number" min="0" max="240" value = "24"/><br>
           <strong>Orbital Radius (in AU from Star): </strong>
-          <input class="outputs form-control" id="planetInput69" type="text" value = "0"/><br>
+          <input class="outputs form-control" id="planetInput69" type="text" value = "1"/><br>
           <strong>Notes (Custom Details): </strong>
           <input class="outputs form-control" id="planetInput70" type="text"><br>
           <input class="btn btn-primary" id="planetSubmit7" type="submit"><br>
         </div>
         </form>
-        </div>
-    </div>  
-    <hr> <!-- horizontal dividing line-->
-
-    <h2 class="center">Planet Outputs</h2>
-    <section class="sub borders margin"> <!-- Section containing all of the planetary outputs-->
-    <h4 class="center"><strong>Length of Day and Length of Year</strong></h4>
-    
-    <div class="aContainer" id="thePlanetsOutputs">
-
-      <div id="firstPlanetOutputs"> <!-- First Planet's Outputs-->
-      <h3 id="nameOfFirstPlanet">First Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity1" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day (given in hours): 
-      <input class="planetOutputs form-control" id="planetOutput1" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput2" type="text" placeholder="24"/></strong><br><hr>
-      </div>
-
-      <div id="secondPlanetOutputs"> <!-- Second Planet's Outputs-->
-      <h3 id="nameOfSecondPlanet">Second Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity2" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day (given in hours): 
-      <input class="planetOutputs form-control" id="planetOutput3" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput4" type="text" placeholder="24"/></strong><br><hr>
-      </div>
-
-      <div id="thirdplanetOutputs"> <!-- Third Planet's Outputs-->
-      <h3 id="nameOfThirdPlanet">Third Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity3" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day (given in hours): 
-      <input class="planetOutputs form-control" id="planetOutput5" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput6" type="text" placeholder="24"/></strong><br><hr>
-      </div>
-
-      <div id="fourthplanetOutputs"> <!-- Fourth Planet's Outputs-->
-      <h3 id="nameOfFourthPlanet">Fourth Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity4" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day (given in hours): 
-      <input class="planetOutputs form-control" id="planetOutput7" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput8" type="text" placeholder="24"/></strong><br><hr>
-      </div>
-
-      <div id="fifthplanetOutputs"> <!-- Fifth Planet's Outputs-->
-      <h3 id="nameOfFifthPlanet">Fifth Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity5" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day (given in hours): 
-      <input class="planetOutputs form-control" id="planetOutput9" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput10" type="text" placeholder="24"/></strong><br><hr>
-      </div>
-
-      <div id="sixthPlanetOutputs"> <!-- Sixth Planet's Outputs-->
-      <h3 id="nameOfSixthPlanet">Sixth Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity6" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day: 
-      <input class="planetOutputs form-control" id="planetOutput11" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput12" type="text" placeholder="24"/></strong><br><hr>
-      </div>
+      </section>
       
-      <div id="seventhplanetOutputs"> <!-- Seventh Planet's Outputs-->
-      <h3 id="nameOfSeventhPlanet">Seventh Planet</h3><br>
-      <strong>Gravity (in m/s^2): 
-      <input class="planetOutputs form-control" id="planetGravity7" type="text" placeholder="9.8"/></strong><br>
-      <strong>Length of Day: 
-      <input class="planetOutputs form-control" id="planetOutput13" type="text" placeholder="24"/></strong><br>
-      <strong>Length of Year (given in this Planet's Days): 
-      <input class="planetOutputs form-control" id="planetOutput14" type="text" placeholder="24"/></strong><br><hr>
-      </div>
+      <section class="sub borders margin col-sm-6">
+        <div id="seventhplanetOutputs"> <!-- Seventh Planet's Outputs-->
+          <h3 id="nameOfSeventhPlanetOutputs" class="title">Seventh Planet Outputs</h3><br>
+          <strong>Gravity (in m/s^2): 
+          <input class="planetOutputs form-control" id="planetGravity7" type="text" placeholder="9.8"/></strong><br>
+          <strong>Length of Day: 
+          <input class="planetOutputs form-control" id="planetOutput13" type="text" placeholder="24"/></strong><br>
+          <strong>Length of Year (given in this Planet's Days): 
+          <input class="planetOutputs form-control" id="planetOutput14" type="text" placeholder="365"/></strong><br>
+        </div>
+      </section>
+    </article>
+    <hr id="hr7">  
 
 
-
-
-
-    </div>
-  </section>
-  </article>
-
-  <footer class="row">
+  <footer style="text-align:center">
     <div>
     <br>
     <br>
-      <small>Property of Andrew Roling © 2017; created by Matthew Reed.</small>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="M8ZTWAYG4UU2L">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+      <small class="title">Property of Andrew Roling © 2017; created by Matthew Reed.</small>
     </div>
   </footer> 
   </div>
-      <script>
-       
-      </script>
       <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="js/script.js"></script>
