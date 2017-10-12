@@ -87,6 +87,7 @@ $(function() {
 			case "1":
 			$("#planetOne").show();
 			$("#firstPlanetOutputs").show();
+			$("#hr1").show();
 			event.preventDefault();
 			break;
 			case "2":
@@ -94,6 +95,8 @@ $(function() {
 			$("#planetTwo").show();
 			$("#firstPlanetOutputs").show();
 			$("#secondPlanetOutputs").show();
+			$("#hr1").show();
+ 			$("#hr2").show();
 			event.preventDefault();
 			break;
 			case "3":
@@ -103,6 +106,9 @@ $(function() {
 			$("#firstPlanetOutputs").show();
 			$("#secondPlanetOutputs").show();
 			$("#thirdplanetOutputs").show();
+			$("#hr1").show();
+ 			$("#hr2").show();
+ 			$("#hr3").show();
 			event.preventDefault();
 			break;
 			case "4":
@@ -114,6 +120,10 @@ $(function() {
 			$("#secondPlanetOutputs").show();
 			$("#thirdplanetOutputs").show();
 			$("#fourthplanetOutputs").show();
+			$("#hr1").show();
+ 			$("#hr2").show();
+ 			$("#hr3").show();
+ 			$("#hr4").show();
 			event.preventDefault();
 			break;
 			case "5":
@@ -127,6 +137,11 @@ $(function() {
 			$("#thirdplanetOutputs").show();
 			$("#fourthplanetOutputs").show();
 			$("#fifthplanetOutputs").show();
+			$("#hr1").show();
+ 			$("#hr2").show();
+ 			$("#hr3").show();
+ 			$("#hr4").show();
+ 			$("#hr5").show();
 			event.preventDefault();
 			break;
 			case "6":
@@ -142,6 +157,12 @@ $(function() {
 			$("#fourthplanetOutputs").show();
 			$("#fifthplanetOutputs").show();
 			$("#sixthPlanetOutputs").show();
+			$("#hr1").show();
+ 			$("#hr2").show();
+ 			$("#hr3").show();
+ 			$("#hr4").show();
+ 			$("#hr5").show();
+ 			$("#hr6").show();
 			event.preventDefault();
 			break;
 			case "7":
@@ -159,20 +180,29 @@ $(function() {
 			$("#fifthplanetOutputs").show();
 			$("#sixthPlanetOutputs").show();
 			$("#seventhplanetOutputs").show();
+			$("#hr1").show();
+ 			$("#hr2").show();
+ 			$("#hr3").show();
+ 			$("#hr4").show();
+ 			$("#hr5").show();
+ 			$("#hr6").show();
+ 			$("#hr7").show();
 			event.preventDefault();
 			break;
 			default:
-			alert(0);
+			alert("Enter up to seven planets");
+			event.preventDefault();
 	};
 })
 })
 
-//calculations for planetary inputs
+//calculations for first planetary inputs
 $(function() {
 	$("#firstPlanetInputs").submit(function(event) {
  		var nameOfPlanet1 = $("#planetInput1").val();
+ 		var nameOfPlanetOutput = nameOfPlanet1 + "'s "+ "Outputs"
  		var massOfPlanet1 = 5.97219e24 * $("#planetInput3").val();
- 		var radiusOfPlanet1 = $("#planetOneRadius").val();
+ 		var radiusOfPlanet1 = 6371 * $("#planetOneRadius").val();
 		
 		var meteredRadius1 = radiusOfPlanet1*1000;
 		var constantG1 = (6.673*10**-11);
@@ -188,6 +218,7 @@ $(function() {
 		$("#planetOutput1").val(planetOneRotation);
 
  		$("#nameOfFirstPlanet").html(nameOfPlanet1);
+ 		$("#nameOfFirstPlanetOutputs").html(nameOfPlanetOutput);
  		$("#planetGravity1").val(planetOneGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet1){
  			alert("First Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -196,12 +227,13 @@ $(function() {
  		event.preventDefault();
 })
 })
-//calculations for planetary inputs
+//calculations for second planetary inputs
 $(function() {
 	$("#secondPlanetInputs").submit(function(event) {
 		var nameOfPlanet2 = $("#planetInput11").val();
+		var nameOfPlanet2Outputs = nameOfPlanet2 + "'s Outputs";
 		var massOfPlanet2 = 5.97219e24 * $("#planetInput13").val();
-		var radiusOfPlanet2 = $("#planetTwoRadius").val();
+		var radiusOfPlanet2 = 6371 * $("#planetTwoRadius").val();
 		
 		var meteredRadius2 = radiusOfPlanet2*1000;
 		var constantG2 = (6.673*10**-11);
@@ -218,6 +250,7 @@ $(function() {
 		$("#planetOutput3").val(planetTwoRotation);
 
 		$("#nameOfSecondPlanet").html(nameOfPlanet2);
+		$("#nameOfSecondPlanetOutputs").html(nameOfPlanet2Outputs);
 		$("#planetGravity2").val(planetTwoGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet2){
  			alert("Second Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -226,12 +259,13 @@ $(function() {
  		event.preventDefault();
 })
 })
-//calculations for planetary inputs
+//calculations for third planetary inputs
 $(function() {
 	$("#thirdPlanetInputs").submit(function(event) {
 		var nameOfPlanet3 = $("#planetInput21").val();
+		var nameOfPlanet3Outputs = nameOfPlanet3 + "'s Outputs";
 		var massOfPlanet3 = 5.97219e24 * $("#planetInput23").val();
-		var radiusOfPlanet3 = $("#planetThreeRadius").val();
+		var radiusOfPlanet3 = 6371 * $("#planetThreeRadius").val();
 		
 		var meteredRadius3 = radiusOfPlanet3*1000;
 		var constantG3 = (6.673*10**-11);
@@ -247,6 +281,7 @@ $(function() {
 		$("#planetOutput5").val(planetThreeRotation);
 
 		$("#nameOfThirdPlanet").html(nameOfPlanet3);
+		$("#nameOfThirdPlanetOutputs").html(nameOfPlanet3Outputs);
 		$("#planetGravity3").val(planetThreeGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet3){
  			alert("Third Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -259,8 +294,9 @@ $(function() {
 $(function() {
 	$("#fourthPlanetInputs").submit(function(event) {
 		var nameOfPlanet4 = $("#planetInput31").val();
+		var nameOfPlanet4Outputs = nameOfPlanet4 + "'s Outputs";
 		var massOfPlanet4 = 5.97219e24 * $("#planetInput33").val();
-		var radiusOfPlanet4 = $("#planetFourRadius").val();
+		var radiusOfPlanet4 = 6371 * $("#planetFourRadius").val();
 		
 		var meteredRadius4 = radiusOfPlanet4*1000;
 		var constantG4 = (6.673*10**-11);
@@ -276,6 +312,7 @@ $(function() {
 		$("#planetOutput7").val(planetFourRotation);
 
 		$("#nameOfFourthPlanet").html(nameOfPlanet4);
+		$("#nameOfFourthPlanetOutputs").html(nameOfPlanet4Outputs);
 		$("#planetGravity4").val(planetFourGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet4){
  			alert("Fourth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -288,8 +325,9 @@ $(function() {
 $(function() {
 	$("#fifthPlanetInputs").submit(function(event) {
 		var nameOfPlanet5 = $("#planetInput41").val();
+		var nameOfPlanet5Outputs = nameOfPlanet5 + "'s Outputs";
 		var massOfPlanet5 = 5.97219e24 * $("#planetInput43").val();
-		var radiusOfPlanet5 = $("#planetFiveRadius").val();
+		var radiusOfPlanet5 = 6371 * $("#planetFiveRadius").val();
 		
 		var meteredRadius5 = radiusOfPlanet5*1000;
 		var constantG5 = (6.673*10**-11);
@@ -305,6 +343,7 @@ $(function() {
 		$("#planetOutput9").val(planetFiveRotation);
 
 		$("#nameOfFifthPlanet").html(nameOfPlanet5);
+		$("#nameOfFifthPlanetOutputs").html(nameOfPlanet5Outputs);
 		$("#planetGravity5").val(planetFiveGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet5){
  			alert("Fifth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -317,8 +356,9 @@ $(function() {
 $(function() {
 	$("#sixthPlanetInputs").submit(function(event) {
 		var nameOfPlanet6 = $("#planetInput51").val();
+		var nameOfPlanet6Outputs = nameOfPlanet6 + "'s Outputs";
 		var massOfPlanet6 = 5.97219e24 * $("#planetInput53").val();
-		var radiusOfPlanet6 = $("#planetSixRadius").val();
+		var radiusOfPlanet6 = 6371 * $("#planetSixRadius").val();
 		
 		var meteredRadius6 = radiusOfPlanet6*1000;
 		var constantG6 = (6.673*10**-11);
@@ -333,6 +373,7 @@ $(function() {
 		$("#planetOutput11").val(planetSixRotation);
 
 		$("#nameOfSixthPlanet").html(nameOfPlanet6);
+		$("#nameOfSixthPlanetOutputs").html(nameOfPlanet6Outputs);
 		$("#planetGravity6").val(planetSixGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet6){
  			alert("Sixth Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -344,9 +385,10 @@ $(function() {
 //calculations for planetary inputs
 $(function() {
 	$("#seventhPlanetInputs").submit(function(event) {
-		var nameOfPlanet7 = $("#planetInput61").val();	
+		var nameOfPlanet7 = $("#planetInput61").val();
+		var nameOfPlanet7Outputs = nameOfPlanet7 + "'s Outputs";	
 		var massOfPlanet7 = 5.97219e24 * $("#planetInput63").val();
-		var radiusOfPlanet7 = $("#planetSevenRadius").val();
+		var radiusOfPlanet7 = 6371 * $("#planetSevenRadius").val();
 		
 		var meteredRadius7 = radiusOfPlanet7*1000;
 		var constantG7 = (6.673*10**-11);
@@ -361,6 +403,7 @@ $(function() {
 		$("#planetOutput13").val(planetSevenRotation);
 
 		$("#nameOfSeventhPlanet").html(nameOfPlanet7);
+		$("#nameOfSeventhPlanetOutputs").html(nameOfPlanet7Outputs);
 		$("#planetGravity7").val(planetSevenGravity.toPrecision(3));
  		if (mass() *.3 <= massOfPlanet7){
  			alert("Seventh Planet's mass exceeds realistic parameters; Must be less than a third of your Star's Mass.");
@@ -394,6 +437,13 @@ $(document).ready(function(){
  $("#fifthplanetOutputs").hide();
  $("#sixthPlanetOutputs").hide();
  $("#seventhplanetOutputs").hide();
+ $("#hr1").hide();
+ $("#hr2").hide();
+ $("#hr3").hide();
+ $("#hr4").hide();
+ $("#hr5").hide();
+ $("#hr6").hide();
+ $("#hr7").hide();
 
 var myNavBar = {
 
