@@ -1,8 +1,20 @@
 body{
-   
+    background-image: url("nebula.jpg");
     background-color: lightgray;
     font-family: "Raleway";
-    color:black;
+    color:  #26a69a;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+}
+
+.title{
+    color:#337ab7;
+}
+.subHeader{
+    color:#7f7f7f;
 }
 .first {
     text-align: center;
@@ -16,7 +28,11 @@ body{
 .margin{
     margin:10px 0px 0px 0px;
 }
-
+.gotContainer {
+        width: 600px;
+        
+        font-size: 16px;
+    }
 
 .thisContainer {
         width: 500px;
@@ -28,6 +44,16 @@ body{
         width: 100%;
         clear: left;
     }
+.aContainer {
+    width: 500px;
+    clear: both;
+    font-size: 16px;
+}
+
+.aContainer input {
+    width: 100%;
+    clear: left;
+}
 
  .center{
     text-align: center;
