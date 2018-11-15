@@ -19,7 +19,7 @@ function getRandomIntInclusive() {
         max = Math.floor(100);
         return (Math.floor(Math.random() * (max - min + 1)) + min);
 }
-//Used in calculating the habitable zone
+//function used in calculating the habitable zone
 function spectralClass(){
     var differ = getRandomIntInclusive();
     var obj = JSON.parse($("#spectral").val());
@@ -62,7 +62,7 @@ $(function() {
 	event.preventDefault();
 })
 })
-//hides/shows values for number of planets user has chosen for their solar system
+//hides & shows values for number of planets user has chosen for their solar system
 $(function() {
 	$("#planetCreation").submit(function(event) {
 	
