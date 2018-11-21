@@ -19,7 +19,7 @@ Random cosmic mass disruption: By generating a random number between the physica
 Spectral Class: Is the classification of the star observed. Classification model: Yerkes spectral classification.
 Helpful guide: https://en.wikipedia.org/wiki/Stellar_classification#Yerkes_spectral_classification
 
-Habitable Zone: This is why I created this app. Extrapolating the habitable zone from the data and deriving the width/circumference/distance to the borders allows for a more narrow search. As you can see by the code this is overlayed with our solar system and then is fitted by the variations of the target star. This can either narrow/widen the zone, shift the zone farther or closer, etc. 
+Habitable Zone: This is why I created this app. Extrapolating the habitable zone from the data and deriving the width/circumference/distance to the borders allows for a more focused search. As you can see by the code, this is overlayed with our solar system and then is fitted by the variations of the target star. This can either narrow/widen the zone, shift the zone farther or closer, etc. 
 
 Thank you again for taking the time to read this and I hope you get some use or ideas from this. 
 You have my full consent to use my code in your own work and projects. Cheers!
